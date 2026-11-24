@@ -1,0 +1,111 @@
+  Forecasting International Economic Cooperation
+Links in Temporal Event Networks Using GDELT and
+                     Timestral
+
+
+                 Urvi Desai                                    Sinchana Arun
+        Department of Computer Science                  Department of Computer Science
+              Rutgers University                              Rutgers University
+       [contact address removed]                   [contact address removed]
+             Student ID: ubd4                               Student ID: ssa223
+
+                                         Varesh Patel
+                                 Department of Computer Science
+                                       Rutgers University
+                               [contact address removed]
+                                     Student ID: vp752
+
+
+
+                                             Abstract
+
+         Predicting international economic relationships is vital for trade risk management
+         and macro-financial stability. While Temporal Knowledge Graphs (TKGs) model
+         structured event sequences, standard graph methods struggle with multi-scale
+         temporal dynamics. We propose a hybrid predictive framework decoupling event
+         extraction from numerical sequence forecasting. Using the GDELT database,
+         we isolate country-level economic cooperation events, extract dynamic graph
+         features, and feed these numerical series into Timestral, a time-series foundation
+         model. We map Timestral’s forecasts into edge probabilities over a 30-day horizon
+         using a calibrated logistic function. We evaluate link prediction accuracy against
+         topological and statistical baselines in a walk-forward backtest.
+
+
+1   Introduction & Motivation
+International economic networks evolve under geopolitical and market forces, propagating shifts into
+trade flows and financial markets. Temporal Knowledge Graph Completion (TKGC) aims to predict
+missing or future temporal links (ei , r, ej , t + ∆t). However, existing TKG models rely on static
+embeddings or simple recurrent architectures that fail to capture non-stationary dynamics.
+Pretrained foundation models like Timestral (3) excel at zero-shot time-series forecasting but operate
+strictly on numerical sequences. To bridge this gap, we present a two-stage pipeline: (1) We
+construct a TKG of country-level economic cooperation using the structured GDELT dataset (1).
+(2) We compute historical interaction counts and topological features for entity pairs and pass these
+numerical series into Timestral to forecast future interaction intensity. Mapping this forecast to edge
+formation probability over a 30-day horizon (H = 30) provides an interpretable framework for
+dynamic link forecasting.
+
+2   Related Work
+Temporal Knowledge Graph Completion (TKGC): Early TKG methods like Know-Evolve (4),
+CyGNet (5), and TGNs (6) extend static embedding models (e.g., TransE (7)) using continuous-time
+
+
+37th Conference on Neural Information Processing Systems (NeurIPS 2023).
+encodings or recurrent modules. However, these methods often overfit short windows and struggle
+with non-linear trends.
+Time-Series Foundation Models: Recent work demonstrates zero-shot time-series forecasting using
+LLM sequence models (8). Timestral (3) operates directly on continuous numerical series, outputting
+point and quantile estimates. Our work transforms dynamic graph topology into numerical sequence
+inputs suitable for Timestral inference.
+
+3     Proposed Method
+3.1   Dataset Formulation: GDELT Event Stream
+We use the GDELT 2.0 Event Database (1), which provides pre-extracted, CAMEO-coded (2) event
+records (ei , r, ej , t) at the country level. We focus on one relation: CAMEO code 061 (Cooperate
+economically). For each country pair (ei , ej ), we compute daily interaction counts over 2020–2024
+                                       (T )
+to construct historical sequence Yi,j = [yi,j (T − W ), . . . , yi,j (T )], where W = 90 days.
+
+3.2   Topological Feature Extraction & Link Forecasting
+                                                                                 |N (e )∩N (e )|
+We compute daily snapshot metrics: Jaccard Similarity SJ (ei , ej , t) = |Ntt (eii )∪Ntt (ejj )| and Pref-
+erential Attachment SP A (ei , ej , t) = |Nt (ei )| × |Nt (ej )|, yielding multivariate input Xi,j (t) =
+[yi,j (t), SJ (t), SP A (t)].
+                                                                            (︂        )︂
+                                                                                 (T )
+Timestral forecasts interaction intensity ŷi,j (T + 1 : T + H) = Timestral Xi,j over H = 30 days.
+                                                                                         )︁)︁−1
+We map ŷi,j to link probability P (LinkTi,j+H = 1) = 1 + exp −(w⊤ ŷi,j + b)
+                                                             (︁        (︁
+                                                                                                , calibrating
+weights w, b via logistic regression on validation data.
+3.3   Baselines & Evaluation Protocol
+We perform a strict walk-forward backtest with non-overlapping 30-day evaluation windows. We
+benchmark against: (1) Static Topological Metrics (Jaccard Similarity, Common Neighbors at T );
+(2) Classical Time Series (ARIMA (9), Prophet (10)); and (3) Static Logistic Regression on rolling
+topological features. Models are evaluated using **ROC-AUC**, **Precision@K**, and **MRR**.
+
+References
+ [1] Kalev Leetaru and Philip A. Schrodt. GDELT: Global data on events, location, and tone, 1979–2012. In
+     ISA Annual Convention, volume 2, pages 1–49, 2013.
+ [2] Philip A. Schrodt. CAMEO: Conflict and Mediation Event Observations codebook v1.1b3. Penn State
+     Univ., 2012.
+ [3] Mistral AI. Timestral: Time-series foundation models for zero-shot forecasting. https://huggingface.
+     co/mistralai/Timestral-209M, Oct 2026.
+ [4] Rakshit Trivedi, Hanjun Dai, Yichen Wang, and Le Song. Know-Evolve: Deep temporal reasoning for
+     dynamic knowledge graphs. In ICML, pages 3462–3471, 2017.
+ [5] Cunchao Zhu, Muhao Chen, Changjun Fan, Guangquan Cheng, and Yan Zhang. Learning from history:
+     Modeling TKGs with sequential copy-gen networks. In AAAI, 2021.
+ [6] Emanuele Rossi et al. Temporal graph networks for deep learning on dynamic graphs. arXiv:2006.10637,
+     2020.
+ [7] Antoine Bordes, Nicolas Usunier, Alberto Garcia-Durán, Jason Weston, and Oksana Yakhnenko. Translat-
+     ing embeddings for modeling multi-relational data. In NeurIPS, volume 26, 2013.
+ [8] Nate Gruver, Marc Finzi, Shikai Qiu, and Andrew Gordon Wilson. Large language models are zero-shot
+     time series forecasters. In NeurIPS, volume 36, 2023.
+ [9] George E. P. Box et al. Time Series Analysis: Forecasting and Control. Wiley, 5th edition, 2015.
+[10] Sean J. Taylor and Benjamin Letham. Forecasting at scale. The American Statistician, 72(1):37–45, 2018.
+
+
+
+
+                                                     2
+

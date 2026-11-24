@@ -1,0 +1,5 @@
+code,label,eligible,entity_kind,reason,source_version
+AUS,AUS,true,synthetic_fixture,Synthetic demo roster,synthetic
+CAN,CAN,true,synthetic_fixture,Synthetic demo roster,synthetic
+IND,IND,true,synthetic_fixture,Synthetic demo roster,synthetic
+USA,USA,true,synthetic_fixture,Synthetic demo roster,synthetic

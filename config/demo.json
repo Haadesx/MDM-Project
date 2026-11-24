@@ -1,0 +1,54 @@
+{
+  "schema_version": "1.0.0",
+  "profile": "demo_synthetic",
+  "synthetic": true,
+  "random_seed": 20261120,
+  "fixture": "fixtures/gdelt_events_synthetic.json",
+  "cohort": {
+    "countries": [
+      "AUS",
+      "CAN",
+      "IND",
+      "USA"
+    ],
+    "pairs": "all_unordered",
+    "expected_pairs": 6
+  },
+  "origin": "2024-01-31",
+  "temporal": {
+    "context_days": 90,
+    "graph_window_days": 30,
+    "raw_context_days": 119,
+    "horizon_days": 30
+  },
+  "models": {
+    "required": [
+      "persistence_binary",
+      "recent_count30",
+      "jaccard",
+      "common_neighbors",
+      "preferential_attachment",
+      "demo_forecast_stub"
+    ],
+    "backend": "fake_deterministic",
+    "real_model_download": false
+  },
+  "evaluation": {
+    "k_values": [
+      2,
+      10
+    ],
+    "cap_k_to_candidates": true
+  },
+  "network_allowed": false,
+  "research_complete": false,
+  "outputs": {
+    "directory": "outputs/demo",
+    "banner": "SYNTHETIC SOFTWARE DEMONSTRATION - NOT RESEARCH RESULTS"
+  },
+  "notes": [
+    "The delivered fixture validates one origin and core transforms.",
+    "The implementation must add a deterministic multi-year synthetic generator for calibration/fit integration tests.",
+    "The fake backend is allowed only in this named profile; it must never be labelled Timestral."
+  ]
+}

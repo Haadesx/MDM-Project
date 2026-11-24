@@ -1,0 +1,113 @@
+{
+  "artifacts": {
+    "candidate_pairs.parquet": "1c84a1e9f923827adf64de5587b9773d8a56535aa6654cee52aec13293a6f868",
+    "cleaning_audit.json": "e1b4284f2f9d0c8c0107f4329922a227c9e50758e52b9a8d3ce69d83be543e72",
+    "cohort.csv": "418d32335e409381e5ca9ee26206af3e18f83aeb5665673a5f043412379bc23a",
+    "country_registry.csv": "adb6bd5cebd93f6d540a3949d5b29110d843d5cef857ccbfc1ee9d00a6d3a99b",
+    "coverage.parquet": "9f3e25d383c1185cbd92967a1b6ebd1cd72a6dfcefc837c935e0eeeedc445b13",
+    "daily_counts.parquet": "937c71fd5012f0fe2aacff1c7afcbce944dc600501bdc401786c2e9de547710d",
+    "daily_graph_features.parquet": "feda735d0ffa2cd7c052ca461b212c71a23c5d10af82f478fa7825ea73cdf33e",
+    "data_fingerprints.json": "aa6927bbecc6154702a1889b42ab0a059dfb16c427d0cd1146d360c1bffcd6d5",
+    "events.parquet": "af6f7ca86f8d99573c2dea5fa9fb158f8e9edd2c409af55ce31b96d00a2f755e",
+    "labels.parquet": "5fa8121ef574c1a58edb9fb51024b0d44ef52afde87d69abdcbed2562f6324e9",
+    "origins.csv": "8cfc627ab3956c165fec91e905bb878d83ccb50db8e84d0d214c4423f026ea4e"
+  },
+  "cohort_hash": "df70def4c173aef833a14ed1469e1ed457a96c42aacf96e4968b920b3cd58d2c",
+  "countries": [
+    "AUS",
+    "AZE",
+    "BGD",
+    "BRA",
+    "CAN",
+    "CHN",
+    "DEU",
+    "EGY",
+    "ESP",
+    "FRA",
+    "GBR",
+    "IDN",
+    "IRN",
+    "ISR",
+    "ITA",
+    "JPN",
+    "KOR",
+    "MEX",
+    "MYS",
+    "NZL",
+    "PAK",
+    "RUS",
+    "SAU",
+    "SGP",
+    "THA",
+    "TUR",
+    "TWN",
+    "UKR",
+    "USA",
+    "VNM"
+  ],
+  "coverage": {
+    "complete": true,
+    "complete_day_count": 1827,
+    "end_exclusive": "2025-01-01",
+    "evidence_kind": "bigquery_completed_query_full_result",
+    "expected_day_count": 1827,
+    "start": "2020-01-01"
+  },
+  "data_hash": "acc63e07ff1a75f9864964ce2e10c04851a72f8465c6e15a735b306585abff1a",
+  "provenance": {
+    "files": {
+      "coverage.csv": {
+        "bytes": 609569,
+        "sha256": "3656c09ee96dedf662ef4d3a593b6fc96c2c417b3635b939e4b323255844c729"
+      },
+      "gdelt-2-events-061-2020-2024.csv": {
+        "bytes": 82320804,
+        "sha256": "3572838d0e1b16f72fd0d245887e34c6ca5a4183de008b624decc604e4271cd6"
+      },
+      "source.json": {
+        "bytes": 1468,
+        "sha256": "7208c6d444a6e0c8eb285ad5d117a19a13163eb482fc473c99c85adb99188f26"
+      }
+    },
+    "registry": {
+      "classification": "CAMEO labels reviewed before reading outcomes. Raw codes are preserved. Unlisted codes are excluded and counted.",
+      "lookup": "CAMEO.country.txt",
+      "registry_sha256": "adb6bd5cebd93f6d540a3949d5b29110d843d5cef857ccbfc1ee9d00a6d3a99b",
+      "retrieved": "2026-11-20",
+      "sha256": "e1fbc5cf51fd582cd5745263e22d57383a6882c6ea8c4418e1ddb159b568fba3",
+      "source": "https://www.gdeltproject.org/data/lookups/CAMEO.country.txt"
+    },
+    "source": {
+      "coverage": "coverage.csv",
+      "dataset": "GDELT 2.0 Events",
+      "end_exclusive": "2025-01-01",
+      "extracted_at_utc": "2026-11-20T18:04:40Z",
+      "extraction_scope": "SELECT CAST(GLOBALEVENTID AS STRING) AS GlobalEventID, CAST(SQLDATE AS STRING) AS SQLDATE, CAST(DATEADDED AS STRING) AS DATEADDED, Actor1CountryCode, Actor2CountryCode, EventCode FROM `gdelt-bq.gdeltv2.events` WHERE DATEADDED >= 20200101000000 AND DATEADDED < 20250101000000 AND EventCode = '061'",
+      "files": [
+        {
+          "delimiter": ",",
+          "path": "gdelt-2-events-061-2020-2024.csv",
+          "sha256": "3572838d0e1b16f72fd0d245887e34c6ca5a4183de008b624decc604e4271cd6"
+        }
+      ],
+      "job_receipt": {
+        "billed_bytes_display": "29.04 GB",
+        "billing_account_linked": false,
+        "dry_run_display": "29.04 GB",
+        "finished_at_utc": "2026-11-20T18:04:40Z",
+        "job_id": "mdmproject-515318:US.job_BzWznT4Jw1tWyVa7TbId2jLw2EpK",
+        "job_url": "https://console.cloud.google.com/bigquery?project=mdmproject-515318&ws=!1m5!1m4!1m3!1smdmproject-515318!2sjob_BzWznT4Jw1tWyVa7TbId2jLw2EpK!3sUS",
+        "location": "US",
+        "processed_display": "29.04 GB",
+        "result_rows": 1846939,
+        "sandbox": true,
+        "started_at_utc": "2026-11-20T18:04:36Z",
+        "status": "Query completed",
+        "transfer": "Google Cloud Console CSV export through private Google Drive file"
+      },
+      "snapshot": "bigquery:mdmproject-515318:US.job_BzWznT4Jw1tWyVa7TbId2jLw2EpK",
+      "start": "2020-01-01",
+      "synthetic": false
+    }
+  }
+}

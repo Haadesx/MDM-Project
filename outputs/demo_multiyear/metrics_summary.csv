@@ -1,0 +1,98 @@
+run_id,model_id,slice,metric,requested_k,value,valid_windows,evaluated_windows,undefined_reasons,candidate_rows,positive_rows,negative_rows,positive_queries
+demo_multiyear,persistence_binary,all_pairs,roc_auc,,0.6770833333333334,12,12,,72,41,31,0
+demo_multiyear,persistence_binary,all_pairs,average_precision,,0.6936342592592593,12,12,,72,41,31,0
+demo_multiyear,persistence_binary,all_pairs,precision_at_k,2,0.7277777777777777,12,12,,72,41,31,0
+demo_multiyear,persistence_binary,all_pairs,precision_at_k,10,0.5694444444444444,12,12,,72,41,31,0
+demo_multiyear,persistence_binary,all_pairs,filtered_mrr,,0.8105324074074075,12,12,,72,41,31,82
+demo_multiyear,persistence_binary,active_last_30,roc_auc,,0.5,8,12,no_negatives (4),42,29,13,0
+demo_multiyear,persistence_binary,active_last_30,average_precision,,0.7277777777777777,12,12,,42,29,13,0
+demo_multiyear,persistence_binary,active_last_30,precision_at_k,2,0.7277777777777777,12,12,,42,29,13,0
+demo_multiyear,persistence_binary,active_last_30,precision_at_k,10,0.7277777777777777,12,12,,42,29,13,0
+demo_multiyear,persistence_binary,inactive_last_30,roc_auc,,0.5,7,12,no_negatives (1); no_positives (4),30,12,18,0
+demo_multiyear,persistence_binary,inactive_last_30,average_precision,,0.5416666666666666,8,12,no_positives (4),30,12,18,0
+demo_multiyear,persistence_binary,inactive_last_30,precision_at_k,2,0.3611111111111111,12,12,,30,12,18,0
+demo_multiyear,persistence_binary,inactive_last_30,precision_at_k,10,0.3611111111111111,12,12,,30,12,18,0
+demo_multiyear,recent_count30,all_pairs,roc_auc,,0.7233796296296297,12,12,,72,41,31,0
+demo_multiyear,recent_count30,all_pairs,average_precision,,0.7696759259259259,12,12,,72,41,31,0
+demo_multiyear,recent_count30,all_pairs,precision_at_k,2,0.7777777777777778,12,12,,72,41,31,0
+demo_multiyear,recent_count30,all_pairs,precision_at_k,10,0.5694444444444444,12,12,,72,41,31,0
+demo_multiyear,recent_count30,all_pairs,filtered_mrr,,0.8545138888888889,12,12,,72,41,31,82
+demo_multiyear,recent_count30,active_last_30,roc_auc,,0.625,8,12,no_negatives (4),42,29,13,0
+demo_multiyear,recent_count30,active_last_30,average_precision,,0.8171296296296297,12,12,,42,29,13,0
+demo_multiyear,recent_count30,active_last_30,precision_at_k,2,0.7777777777777778,12,12,,42,29,13,0
+demo_multiyear,recent_count30,active_last_30,precision_at_k,10,0.7277777777777777,12,12,,42,29,13,0
+demo_multiyear,recent_count30,inactive_last_30,roc_auc,,0.5,7,12,no_negatives (1); no_positives (4),30,12,18,0
+demo_multiyear,recent_count30,inactive_last_30,average_precision,,0.5416666666666666,8,12,no_positives (4),30,12,18,0
+demo_multiyear,recent_count30,inactive_last_30,precision_at_k,2,0.3611111111111111,12,12,,30,12,18,0
+demo_multiyear,recent_count30,inactive_last_30,precision_at_k,10,0.3611111111111111,12,12,,30,12,18,0
+demo_multiyear,jaccard,all_pairs,roc_auc,,0.3888888888888889,12,12,,72,41,31,0
+demo_multiyear,jaccard,all_pairs,average_precision,,0.5877314814814815,12,12,,72,41,31,0
+demo_multiyear,jaccard,all_pairs,precision_at_k,2,0.4055555555555556,12,12,,72,41,31,0
+demo_multiyear,jaccard,all_pairs,precision_at_k,10,0.5694444444444444,12,12,,72,41,31,0
+demo_multiyear,jaccard,all_pairs,filtered_mrr,,0.6958333333333333,12,12,,72,41,31,82
+demo_multiyear,jaccard,active_last_30,roc_auc,,0.59375,8,12,no_negatives (4),42,29,13,0
+demo_multiyear,jaccard,active_last_30,average_precision,,0.7921296296296295,12,12,,42,29,13,0
+demo_multiyear,jaccard,active_last_30,precision_at_k,2,0.7673611111111112,12,12,,42,29,13,0
+demo_multiyear,jaccard,active_last_30,precision_at_k,10,0.7277777777777777,12,12,,42,29,13,0
+demo_multiyear,jaccard,inactive_last_30,roc_auc,,0.4642857142857143,7,12,no_negatives (1); no_positives (4),30,12,18,0
+demo_multiyear,jaccard,inactive_last_30,average_precision,,0.59375,8,12,no_positives (4),30,12,18,0
+demo_multiyear,jaccard,inactive_last_30,precision_at_k,2,0.34722222222222227,12,12,,30,12,18,0
+demo_multiyear,jaccard,inactive_last_30,precision_at_k,10,0.3611111111111111,12,12,,30,12,18,0
+demo_multiyear,common_neighbors,all_pairs,roc_auc,,0.46875,12,12,,72,41,31,0
+demo_multiyear,common_neighbors,all_pairs,average_precision,,0.6069444444444444,12,12,,72,41,31,0
+demo_multiyear,common_neighbors,all_pairs,precision_at_k,2,0.5222222222222223,12,12,,72,41,31,0
+demo_multiyear,common_neighbors,all_pairs,precision_at_k,10,0.5694444444444444,12,12,,72,41,31,0
+demo_multiyear,common_neighbors,all_pairs,filtered_mrr,,0.7108796296296296,12,12,,72,41,31,82
+demo_multiyear,common_neighbors,active_last_30,roc_auc,,0.6041666666666666,8,12,no_negatives (4),42,29,13,0
+demo_multiyear,common_neighbors,active_last_30,average_precision,,0.7828703703703703,12,12,,42,29,13,0
+demo_multiyear,common_neighbors,active_last_30,precision_at_k,2,0.7743055555555555,12,12,,42,29,13,0
+demo_multiyear,common_neighbors,active_last_30,precision_at_k,10,0.7277777777777777,12,12,,42,29,13,0
+demo_multiyear,common_neighbors,inactive_last_30,roc_auc,,0.4642857142857143,7,12,no_negatives (1); no_positives (4),30,12,18,0
+demo_multiyear,common_neighbors,inactive_last_30,average_precision,,0.59375,8,12,no_positives (4),30,12,18,0
+demo_multiyear,common_neighbors,inactive_last_30,precision_at_k,2,0.34722222222222227,12,12,,30,12,18,0
+demo_multiyear,common_neighbors,inactive_last_30,precision_at_k,10,0.3611111111111111,12,12,,30,12,18,0
+demo_multiyear,preferential_attachment,all_pairs,roc_auc,,0.6956018518518517,12,12,,72,41,31,0
+demo_multiyear,preferential_attachment,all_pairs,average_precision,,0.7462962962962963,12,12,,72,41,31,0
+demo_multiyear,preferential_attachment,all_pairs,precision_at_k,2,0.7743055555555555,12,12,,72,41,31,0
+demo_multiyear,preferential_attachment,all_pairs,precision_at_k,10,0.5694444444444444,12,12,,72,41,31,0
+demo_multiyear,preferential_attachment,all_pairs,filtered_mrr,,0.8194444444444445,12,12,,72,41,31,82
+demo_multiyear,preferential_attachment,active_last_30,roc_auc,,0.6458333333333334,8,12,no_negatives (4),42,29,13,0
+demo_multiyear,preferential_attachment,active_last_30,average_precision,,0.8199074074074074,12,12,,42,29,13,0
+demo_multiyear,preferential_attachment,active_last_30,precision_at_k,2,0.7951388888888888,12,12,,42,29,13,0
+demo_multiyear,preferential_attachment,active_last_30,precision_at_k,10,0.7277777777777777,12,12,,42,29,13,0
+demo_multiyear,preferential_attachment,inactive_last_30,roc_auc,,0.4642857142857143,7,12,no_negatives (1); no_positives (4),30,12,18,0
+demo_multiyear,preferential_attachment,inactive_last_30,average_precision,,0.59375,8,12,no_positives (4),30,12,18,0
+demo_multiyear,preferential_attachment,inactive_last_30,precision_at_k,2,0.34722222222222227,12,12,,30,12,18,0
+demo_multiyear,preferential_attachment,inactive_last_30,precision_at_k,10,0.3611111111111111,12,12,,30,12,18,0
+demo_multiyear,static_logistic_topology,all_pairs,roc_auc,,0.7436342592592592,12,12,,72,41,31,0
+demo_multiyear,static_logistic_topology,all_pairs,average_precision,,0.7842592592592593,12,12,,72,41,31,0
+demo_multiyear,static_logistic_topology,all_pairs,precision_at_k,2,0.7951388888888888,12,12,,72,41,31,0
+demo_multiyear,static_logistic_topology,all_pairs,precision_at_k,10,0.5694444444444444,12,12,,72,41,31,0
+demo_multiyear,static_logistic_topology,all_pairs,filtered_mrr,,0.8680555555555555,12,12,,72,41,31,82
+demo_multiyear,static_logistic_topology,all_pairs,brier_score,,0.2357329837721895,12,12,,72,41,31,0
+demo_multiyear,static_logistic_topology,active_last_30,roc_auc,,0.6458333333333334,8,12,no_negatives (4),42,29,13,0
+demo_multiyear,static_logistic_topology,active_last_30,average_precision,,0.8199074074074074,12,12,,42,29,13,0
+demo_multiyear,static_logistic_topology,active_last_30,precision_at_k,2,0.7951388888888888,12,12,,42,29,13,0
+demo_multiyear,static_logistic_topology,active_last_30,precision_at_k,10,0.7277777777777777,12,12,,42,29,13,0
+demo_multiyear,static_logistic_topology,active_last_30,brier_score,,0.21777247656621437,12,12,,42,29,13,0
+demo_multiyear,static_logistic_topology,inactive_last_30,roc_auc,,0.5892857142857143,7,12,no_negatives (1); no_positives (4),30,12,18,0
+demo_multiyear,static_logistic_topology,inactive_last_30,average_precision,,0.6875,8,12,no_positives (4),30,12,18,0
+demo_multiyear,static_logistic_topology,inactive_last_30,precision_at_k,2,0.3888888888888889,12,12,,30,12,18,0
+demo_multiyear,static_logistic_topology,inactive_last_30,precision_at_k,10,0.3611111111111111,12,12,,30,12,18,0
+demo_multiyear,static_logistic_topology,inactive_last_30,brier_score,,0.25237444380750707,12,12,,30,12,18,0
+demo_multiyear,demo_forecast_stub_mapped,all_pairs,roc_auc,,0.7337962962962963,12,12,,72,41,31,0
+demo_multiyear,demo_forecast_stub_mapped,all_pairs,average_precision,,0.8152777777777778,12,12,,72,41,31,0
+demo_multiyear,demo_forecast_stub_mapped,all_pairs,precision_at_k,2,0.7847222222222222,12,12,,72,41,31,0
+demo_multiyear,demo_forecast_stub_mapped,all_pairs,precision_at_k,10,0.5694444444444444,12,12,,72,41,31,0
+demo_multiyear,demo_forecast_stub_mapped,all_pairs,filtered_mrr,,0.8663194444444445,12,12,,72,41,31,82
+demo_multiyear,demo_forecast_stub_mapped,all_pairs,brier_score,,0.22115654305260476,12,12,,72,41,31,0
+demo_multiyear,demo_forecast_stub_mapped,active_last_30,roc_auc,,0.6666666666666666,8,12,no_negatives (4),42,29,13,0
+demo_multiyear,demo_forecast_stub_mapped,active_last_30,average_precision,,0.8587962962962963,12,12,,42,29,13,0
+demo_multiyear,demo_forecast_stub_mapped,active_last_30,precision_at_k,2,0.7847222222222222,12,12,,42,29,13,0
+demo_multiyear,demo_forecast_stub_mapped,active_last_30,precision_at_k,10,0.7277777777777777,12,12,,42,29,13,0
+demo_multiyear,demo_forecast_stub_mapped,active_last_30,brier_score,,0.191593838425737,12,12,,42,29,13,0
+demo_multiyear,demo_forecast_stub_mapped,inactive_last_30,roc_auc,,0.4642857142857143,7,12,no_negatives (1); no_positives (4),30,12,18,0
+demo_multiyear,demo_forecast_stub_mapped,inactive_last_30,average_precision,,0.59375,8,12,no_positives (4),30,12,18,0
+demo_multiyear,demo_forecast_stub_mapped,inactive_last_30,precision_at_k,2,0.34722222222222227,12,12,,30,12,18,0
+demo_multiyear,demo_forecast_stub_mapped,inactive_last_30,precision_at_k,10,0.3611111111111111,12,12,,30,12,18,0
+demo_multiyear,demo_forecast_stub_mapped,inactive_last_30,brier_score,,0.24712916636706692,12,12,,30,12,18,0

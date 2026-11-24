@@ -1,0 +1,13 @@
+{
+  "hashes": {
+    "fit_status.json": "ddf4716898b2c074ff24544ef1969c1b87b384cc4b5bcba9b0287c184b722792",
+    "fitted/demo_forecast_stub_mapped.json": "2b52fc566bc6187edc93d428b29ea3c0301ce55eed7e325a2f8aa0bc85ac9c4a",
+    "fitted/static_logistic_topology.json": "47f0f27882d5d82ef495d8a0ab54ed345c8b944e88791b336664453388b8490a",
+    "forecasts/calibration_demo_forecast_stub_mapped.parquet": "70faa84e23af406728ddace48d609ac5e65baba3e3348d5343739974257d9a12",
+    "forecasts/test_demo_forecast_stub_mapped.parquet": "b5254ba51b4129e06ddc3c65a850c649add87dd7d0ce61fb08901cf83cf19560",
+    "metric_exports_manifest.json": "b34b05905bc53d176f3d6d502fe3f0d58fb1f2b174177261b78731cbe7fa5819",
+    "predictions.parquet": "39836646af53f1c23088b2d52ba8eaf842d720d1f2fff9e0eeb681802ba6329c"
+  },
+  "origins": 12,
+  "score_count": 504
+}

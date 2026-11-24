@@ -1,0 +1,50 @@
+{
+  "blank_country": 1050530,
+  "cohort_retained": 356464,
+  "cohort_retained_share": 0.5532217362829056,
+  "conflicts": 0,
+  "duplicate": 0,
+  "eligible_by_year": {
+    "2020": 122445,
+    "2021": 103882,
+    "2022": 138417,
+    "2023": 150656,
+    "2024": 128942
+  },
+  "eligible_copies": 644342,
+  "eligible_unique": 644342,
+  "excluded_country_codes": {
+    "AFR": 24630,
+    "ASA": 151,
+    "CAS": 85,
+    "CRB": 62,
+    "EAF": 74,
+    "EUR": 76797,
+    "LAM": 2,
+    "MEA": 96,
+    "NMR": 5378,
+    "PGS": 446,
+    "SAF": 130,
+    "SAM": 14,
+    "SAS": 789,
+    "SCN": 1,
+    "SEA": 7111,
+    "SSD": 949,
+    "WAF": 233,
+    "WST": 1127
+  },
+  "lag_days_histogram": {
+    "0": 615253,
+    "1": 1237,
+    "30": 3016,
+    "365": 20153,
+    "3650": 348,
+    "36525": 1420,
+    "7": 2915
+  },
+  "malformed": 0,
+  "relation": 0,
+  "self_pair": 39372,
+  "source_rows": 1846939,
+  "unknown_country": 112695
+}

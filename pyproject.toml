@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "cooperalink"
+version = "0.1.0"
+description = "Reproducible GDELT cooperation link forecasting"
+requires-python = ">=3.11"
+dependencies = ["jsonschema", "matplotlib", "numpy", "pyarrow", "scikit-learn", "statsmodels", "prophet", "timestral"]
+
+[project.scripts]
+cooperalink = "cooperalink.cli:main"
+
+[tool.uv.sources]
+timestral = { git = "https://github.com/mistralai/timestral", rev = "a534bdbd244d64f3d9d743f46c7bf6fc330ed4ff" }
+
+[project.optional-dependencies]
+test = ["pytest>=8,<10"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
+addopts = "-ra"
+

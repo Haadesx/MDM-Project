@@ -1,0 +1,13 @@
+run_id,origin,candidate_count,positive_count,negative_count,positive_prevalence,active_count,activity_rate,eligible_cohort_records,coverage_status
+demo_multiyear,2023-12-31,6,2,4,0.3333333333333333,5,0.8333333333333334,6,complete
+demo_multiyear,2024-01-30,6,4,2,0.6666666666666666,2,0.3333333333333333,9,complete
+demo_multiyear,2024-02-29,6,3,3,0.5,4,0.6666666666666666,7,complete
+demo_multiyear,2024-03-30,6,4,2,0.6666666666666666,3,0.5,10,complete
+demo_multiyear,2024-04-29,6,2,4,0.3333333333333333,4,0.6666666666666666,4,complete
+demo_multiyear,2024-05-29,6,4,2,0.6666666666666666,2,0.3333333333333333,8,complete
+demo_multiyear,2024-06-28,6,4,2,0.6666666666666666,4,0.6666666666666666,9,complete
+demo_multiyear,2024-07-28,6,3,3,0.5,4,0.6666666666666666,5,complete
+demo_multiyear,2024-08-27,6,3,3,0.5,3,0.5,8,complete
+demo_multiyear,2024-09-26,6,4,2,0.6666666666666666,3,0.5,8,complete
+demo_multiyear,2024-10-26,6,4,2,0.6666666666666666,4,0.6666666666666666,10,complete
+demo_multiyear,2024-11-25,6,4,2,0.6666666666666666,4,0.6666666666666666,8,complete

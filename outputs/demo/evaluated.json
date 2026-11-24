@@ -1,0 +1,10 @@
+{
+  "hashes": {
+    "fit_status.json": "b58272bcaa5de85c90294b7ebf619d43419709fffec329e2af3f0f9da4e84f3e",
+    "forecasts/test_demo_forecast_stub.parquet": "718e4d917783e83f34a0976cbd5cf7aad330e178b323629b4f8185ec27495769",
+    "metric_exports_manifest.json": "b2c1b2984cfa196ab03e55142151725923d979866c7f616fb688dab4df5969f8",
+    "predictions.parquet": "c0c95571f75227e0e492dc64ff900bc82856b29b1ca2d4360307b71a846c1c2b"
+  },
+  "origins": 1,
+  "score_count": 36
+}

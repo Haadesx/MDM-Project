@@ -1,0 +1,26 @@
+{
+  "bigquery_source_rows": 1846939,
+  "candidate_count": 435,
+  "completed": true,
+  "macro_average_precision": {
+    "arima": 0.9106899398844233,
+    "common_neighbors": 0.823121926034311,
+    "jaccard": 0.7958116513789789,
+    "persistence_binary": 0.7607106225152886,
+    "preferential_attachment": 0.8339533909055002,
+    "prophet": 0.8754921858619135,
+    "recent_count30": 0.8699414519767954,
+    "static_logistic_topology": 0.8513102469592164,
+    "timestral_count_only": 0.8484621718449499,
+    "timestral_graph": 0.8281448968686966
+  },
+  "model_count": 10,
+  "optimizer_retries": {
+    "calibration": 4,
+    "test": 6
+  },
+  "rows": 52200,
+  "test_origins": 12,
+  "timestral_graph_delta_from_count_only": -0.02031727497625324,
+  "timestral_graph_delta_from_persistence": 0.06743427435340799
+}

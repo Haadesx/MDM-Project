@@ -1,0 +1,250 @@
+{
+  "schema_version": "1.0.0",
+  "profile": "research_top30",
+  "synthetic": false,
+  "random_seed": 20261120,
+  "data": {
+    "dataset": "GDELT 2.0 Events",
+    "source_preference": "local_first",
+    "event_code": "061",
+    "time_field": "DATEADDED",
+    "timezone": "UTC",
+    "start": "2020-01-01",
+    "end_exclusive": "2025-01-01",
+    "event_id_field": "GLOBALEVENTID",
+    "event_id_input_aliases": [
+      "GLOBALEVENTID",
+      "GlobalEventID"
+    ],
+    "country_fields": [
+      "Actor1CountryCode",
+      "Actor2CountryCode"
+    ],
+    "deduplicate_by": "event_id",
+    "pair_direction": "undirected",
+    "exclude_self_pairs": true,
+    "missing_coverage": "error",
+    "require_complete_selection_year": true
+  },
+  "cohort": {
+    "selection_year": 2020,
+    "rule": "endpoint_record_incidence_desc_then_code_asc",
+    "top_n": 30,
+    "require_exact_n": true,
+    "pairs": "all_unordered",
+    "expected_pairs": 435,
+    "negative_sampling": false,
+    "class_weight": null,
+    "registry": "data/registry/country_registry.csv"
+  },
+  "temporal": {
+    "context_days": 90,
+    "graph_window_days": 30,
+    "raw_context_days": 119,
+    "horizon_days": 30,
+    "stride_days": 30,
+    "annual_anchor": "01-01",
+    "allow_partial_horizon": false,
+    "expected_windows_per_year": 12,
+    "omit_year_tail": true,
+    "roles": {
+      "cohort": [
+        2020
+      ],
+      "train": [
+        2021
+      ],
+      "validation": [
+        2022
+      ],
+      "calibration": [
+        2023
+      ],
+      "test": [
+        2024
+      ]
+    }
+  },
+  "features": {
+    "target": "distinct_event_id_count",
+    "graph": "induced_simple_undirected_trailing_window",
+    "covariates": [
+      "jaccard",
+      "preferential_attachment"
+    ],
+    "covariate_transform": "none",
+    "topology_logistic": [
+      "jaccard",
+      "common_neighbors",
+      "log1p_preferential_attachment",
+      "min_degree",
+      "max_degree"
+    ]
+  },
+  "models": {
+    "required": [
+      "persistence_binary",
+      "recent_count30",
+      "jaccard",
+      "common_neighbors",
+      "preferential_attachment",
+      "static_logistic_topology",
+      "arima",
+      "prophet",
+      "timestral_count_only",
+      "timestral_graph"
+    ],
+    "timestral": {
+      "checkpoint": "mistralai/Timestral-209M",
+      "source_revision": null,
+      "weights_revision": null,
+      "require_resolved_revisions": true,
+      "context_shape": [
+        "B",
+        1,
+        90
+      ],
+      "past_covariates_shape": [
+        "B",
+        2,
+        90
+      ],
+      "point_forecast": "median",
+      "dtype": "float32",
+      "symmetric_averaging": true,
+      "clip_nonnegative": true,
+      "known_covariates": false,
+      "batch_size": 32,
+      "load_once": true
+    },
+    "arima": {
+      "order": [
+        1,
+        0,
+        0
+      ],
+      "trend": "c",
+      "seasonal_order": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "enforce_stationarity": true,
+      "enforce_invertibility": true
+    },
+    "prophet": {
+      "growth": "linear",
+      "weekly_seasonality": false,
+      "yearly_seasonality": false,
+      "daily_seasonality": false,
+      "n_changepoints": 5,
+      "changepoint_prior_scale": 0.05,
+      "seasonality_mode": "additive",
+      "uncertainty_samples": 0
+    },
+    "classical_constant_history": "repeat_constant_with_status",
+    "static_logistic": {
+      "C_candidates": [
+        0.1,
+        1,
+        10
+      ],
+      "selection_metric": "macro_average_precision",
+      "tie_break": "smallest_C",
+      "refit_years": [
+        2021,
+        2022
+      ],
+      "regularization": "l2",
+      "solver": "lbfgs",
+      "max_iter": 2000,
+      "standardize": true,
+      "class_weight": null
+    },
+    "mapper": {
+      "input": "30_nonnegative_point_forecasts",
+      "scaler": "StandardScaler",
+      "classifier": "LogisticRegression",
+      "C": 1,
+      "regularization": "l2",
+      "solver": "lbfgs",
+      "max_iter": 2000,
+      "class_weight": null,
+      "fit_years": [
+        2023
+      ],
+      "single_class": "error",
+      "test_refit": false
+    }
+  },
+  "evaluation": {
+    "primary_metric": "macro_average_precision",
+    "required_metrics": [
+      "roc_auc",
+      "average_precision",
+      "precision_at_k",
+      "filtered_mrr"
+    ],
+    "k_values": [
+      10,
+      25,
+      50
+    ],
+    "precision_ties": "expected_hits_uniform_within_exact_score_tie",
+    "mrr_queries": "both_endpoints_of_each_positive_pair",
+    "mrr_filter": "other_same_origin_positive_targets",
+    "mrr_ties": "reciprocal_of_mean_rank",
+    "zero_positive_metrics": "null_with_reason_except_precision_zero",
+    "aggregate": "macro_over_valid_origins_with_support",
+    "required_test_windows": 12,
+    "required_slices": [
+      "all_pairs",
+      "active_last_30",
+      "inactive_last_30"
+    ],
+    "subset_mrr": false,
+    "optional_bootstrap": {
+      "enabled": false,
+      "replicates": 2000,
+      "unit": "consecutive_origin_blocks"
+    },
+    "probability_score_absolute_tolerance": 1e-12
+  },
+  "execution": {
+    "device": "auto_cuda_else_cpu",
+    "max_concurrent_classical_workers": 2,
+    "total_numerical_threads": 4,
+    "max_foundation_model_processes": 1,
+    "new_cloud_spend_allowed": false,
+    "bigquery_execute": false,
+    "bigquery_maximum_bytes_billed": null,
+    "max_new_download_bytes": 2147483648,
+    "max_raw_archive_files": 96,
+    "allow_five_year_raw_archive_download": false,
+    "checkpoint": true,
+    "resume": true,
+    "initial_run_wall_time_hours": null,
+    "wall_time_action": "if_user_budget_set_checkpoint_and_report_incomplete",
+    "profile_before_full_run": true
+  },
+  "outputs": {
+    "directory": "outputs",
+    "format_primary": "parquet",
+    "report_formats": [
+      "markdown",
+      "html"
+    ],
+    "include_model_weights": false,
+    "include_raw_data": false,
+    "provenance_required": true
+  },
+  "completion": {
+    "require_real_data": true,
+    "require_real_timestral_209m": true,
+    "require_all_required_models": true,
+    "require_complete_test_windows": true,
+    "require_all_candidate_rows": true,
+    "require_model_beats_persistence": false
+  }
+}

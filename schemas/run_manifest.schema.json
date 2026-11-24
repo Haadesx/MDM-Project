@@ -1,0 +1,200 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Cooperalink research run manifest",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "run_id",
+    "created_at",
+    "profile",
+    "synthetic",
+    "config_sha256",
+    "data_sha256",
+    "country_registry_sha256",
+    "cohort_sha256",
+    "environment_lock_sha256",
+    "source_coverage",
+    "candidate_count",
+    "planned_test_origins",
+    "models",
+    "artifact_index"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "1.0.0"
+    },
+    "run_id": {
+      "type": "string"
+    },
+    "created_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "profile": {
+      "type": "string"
+    },
+    "synthetic": {
+      "type": "boolean"
+    },
+    "config_sha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "data_sha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "country_registry_sha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "cohort_sha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "environment_lock_sha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "source_coverage": {
+      "type": "object",
+      "required": [
+        "start",
+        "end_exclusive",
+        "complete",
+        "evidence_kind"
+      ],
+      "properties": {
+        "start": {
+          "type": "string",
+          "format": "date"
+        },
+        "end_exclusive": {
+          "type": "string",
+          "format": "date"
+        },
+        "complete": {
+          "type": "boolean"
+        },
+        "evidence_kind": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": true
+    },
+    "candidate_count": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "planned_test_origins": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "format": "date"
+      },
+      "uniqueItems": true
+    },
+    "models": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": [
+          "model_id",
+          "backend_kind",
+          "settings_sha256",
+          "status"
+        ],
+        "properties": {
+          "model_id": {
+            "type": "string"
+          },
+          "backend_kind": {
+            "enum": [
+              "real",
+              "deterministic_rule",
+              "fake"
+            ]
+          },
+          "settings_sha256": {
+            "type": "string",
+            "pattern": "^[0-9a-f]{64}$"
+          },
+          "status": {
+            "enum": [
+              "not_run",
+              "running",
+              "complete",
+              "failed",
+              "blocked"
+            ]
+          },
+          "source_revision": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "weights_revision": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "checkpoint": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "dtype": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "device": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "fit_label_last_day": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        },
+        "additionalProperties": true
+      }
+    },
+    "artifact_index": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "path",
+          "sha256",
+          "bytes"
+        ],
+        "properties": {
+          "path": {
+            "type": "string"
+          },
+          "sha256": {
+            "type": "string",
+            "pattern": "^[0-9a-f]{64}$"
+          },
+          "bytes": {
+            "type": "integer",
+            "minimum": 0
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "additionalProperties": true,
+  "description": "Full experiment acceptance enforces resolved Timestral revisions, no fake research backends, 30 countries/435 pairs/12 final origins and fixed year roles."
+}

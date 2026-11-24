@@ -1,0 +1,50 @@
+[
+  {
+    "pair": [
+      "A",
+      "D"
+    ],
+    "score": 0.9,
+    "label": 0
+  },
+  {
+    "pair": [
+      "A",
+      "B"
+    ],
+    "score": 0.7,
+    "label": 1
+  },
+  {
+    "pair": [
+      "A",
+      "C"
+    ],
+    "score": 0.7,
+    "label": 0
+  },
+  {
+    "pair": [
+      "B",
+      "C"
+    ],
+    "score": 0.6,
+    "label": 0
+  },
+  {
+    "pair": [
+      "B",
+      "D"
+    ],
+    "score": 0.2,
+    "label": 0
+  },
+  {
+    "pair": [
+      "C",
+      "D"
+    ],
+    "score": 0.1,
+    "label": 0
+  }
+]

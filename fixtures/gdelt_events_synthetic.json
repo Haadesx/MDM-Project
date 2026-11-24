@@ -1,0 +1,102 @@
+[
+  {
+    "GlobalEventID": "1001",
+    "Actor1CountryCode": "AUS",
+    "Actor2CountryCode": "CAN",
+    "EventCode": "061",
+    "SQLDATE": "20240102",
+    "DATEADDED": "20240102000000",
+    "Actor1Geo_CountryCode": "ZZ",
+    "Actor2Geo_CountryCode": "YY"
+  },
+  {
+    "GlobalEventID": "1002",
+    "Actor1CountryCode": "CAN",
+    "Actor2CountryCode": "AUS",
+    "EventCode": "061",
+    "SQLDATE": "20240120",
+    "DATEADDED": "20240131000000",
+    "Actor1Geo_CountryCode": "ZZ",
+    "Actor2Geo_CountryCode": "YY"
+  },
+  {
+    "GlobalEventID": "1003",
+    "Actor1CountryCode": "AUS",
+    "Actor2CountryCode": "IND",
+    "EventCode": "061",
+    "SQLDATE": "20240101",
+    "DATEADDED": "20240101000000",
+    "Actor1Geo_CountryCode": "ZZ",
+    "Actor2Geo_CountryCode": "YY"
+  },
+  {
+    "GlobalEventID": "1004",
+    "Actor1CountryCode": "CAN",
+    "Actor2CountryCode": "IND",
+    "EventCode": "061",
+    "SQLDATE": "20240131",
+    "DATEADDED": "20240131000000",
+    "Actor1Geo_CountryCode": "ZZ",
+    "Actor2Geo_CountryCode": "YY"
+  },
+  {
+    "GlobalEventID": "1005",
+    "Actor1CountryCode": "IND",
+    "Actor2CountryCode": "USA",
+    "EventCode": "061",
+    "SQLDATE": "20240115",
+    "DATEADDED": "20240115000000",
+    "Actor1Geo_CountryCode": "ZZ",
+    "Actor2Geo_CountryCode": "YY"
+  },
+  {
+    "GlobalEventID": "1006",
+    "Actor1CountryCode": "CAN",
+    "Actor2CountryCode": "USA",
+    "EventCode": "061",
+    "SQLDATE": "20240201",
+    "DATEADDED": "20240201000000",
+    "Actor1Geo_CountryCode": "ZZ",
+    "Actor2Geo_CountryCode": "YY"
+  },
+  {
+    "GlobalEventID": "1007",
+    "Actor1CountryCode": "AUS",
+    "Actor2CountryCode": "USA",
+    "EventCode": "061",
+    "SQLDATE": "20240301",
+    "DATEADDED": "20240301000000",
+    "Actor1Geo_CountryCode": "ZZ",
+    "Actor2Geo_CountryCode": "YY"
+  },
+  {
+    "GlobalEventID": "1008",
+    "Actor1CountryCode": "AUS",
+    "Actor2CountryCode": "IND",
+    "EventCode": "061",
+    "SQLDATE": "20240302",
+    "DATEADDED": "20240302000000",
+    "Actor1Geo_CountryCode": "ZZ",
+    "Actor2Geo_CountryCode": "YY"
+  },
+  {
+    "GlobalEventID": "1009",
+    "Actor1CountryCode": "IND",
+    "Actor2CountryCode": "USA",
+    "EventCode": "061",
+    "SQLDATE": "20240110",
+    "DATEADDED": "20240205000000",
+    "Actor1Geo_CountryCode": "ZZ",
+    "Actor2Geo_CountryCode": "YY"
+  },
+  {
+    "GlobalEventID": "1001",
+    "Actor1CountryCode": "AUS",
+    "Actor2CountryCode": "CAN",
+    "EventCode": "061",
+    "SQLDATE": "20240102",
+    "DATEADDED": "20240102000000",
+    "Actor1Geo_CountryCode": "ZZ",
+    "Actor2Geo_CountryCode": "YY"
+  }
+]

@@ -1,0 +1,254 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Cooperalink persisted prediction row",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "run_id",
+    "model_id",
+    "origin",
+    "country_a",
+    "country_b",
+    "score",
+    "probability",
+    "status",
+    "synthetic",
+    "input_hash",
+    "configuration_hash"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "1.0.0"
+    },
+    "run_id": {
+      "type": "string"
+    },
+    "model_id": {
+      "type": "string"
+    },
+    "origin": {
+      "type": "string",
+      "format": "date"
+    },
+    "country_a": {
+      "type": "string",
+      "pattern": "^[A-Z]{3}$"
+    },
+    "country_b": {
+      "type": "string",
+      "pattern": "^[A-Z]{3}$"
+    },
+    "score": {
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "probability": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "minimum": 0,
+      "maximum": 1
+    },
+    "status": {
+      "enum": [
+        "ok",
+        "constant_series",
+        "failed",
+        "blocked"
+      ]
+    },
+    "synthetic": {
+      "type": "boolean"
+    },
+    "input_hash": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "configuration_hash": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "mapper_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "runtime_seconds": {
+      "type": "number",
+      "minimum": 0
+    },
+    "error_reason": {
+      "type": [
+        "string",
+        "null"
+      ]
+    }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "status": {
+            "enum": [
+              "ok",
+              "constant_series"
+            ]
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "score": {
+            "type": "number"
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "status": {
+            "enum": [
+              "failed",
+              "blocked"
+            ]
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "score": {
+            "type": "null"
+          },
+          "probability": {
+            "type": "null"
+          },
+          "error_reason": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "required": [
+          "error_reason"
+        ]
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "status": {
+            "enum": [
+              "ok",
+              "constant_series"
+            ]
+          },
+          "model_id": {
+            "enum": [
+              "timestral_graph",
+              "timestral_count_only",
+              "arima",
+              "prophet"
+            ]
+          }
+        }
+      },
+      "then": {
+        "required": [
+          "mapper_id"
+        ],
+        "properties": {
+          "probability": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 1
+          },
+          "mapper_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "score": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 1
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "status": {
+            "const": "ok"
+          },
+          "model_id": {
+            "const": "static_logistic_topology"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "probability": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 1
+          },
+          "score": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 1
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "model_id": {
+            "enum": [
+              "persistence_binary",
+              "recent_count30",
+              "jaccard",
+              "common_neighbors",
+              "preferential_attachment"
+            ]
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "probability": {
+            "type": "null"
+          },
+          "mapper_id": {
+            "type": "null"
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "status": {
+            "const": "constant_series"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "model_id": {
+            "enum": [
+              "arima",
+              "prophet"
+            ]
+          }
+        }
+      }
+    }
+  ],
+  "additionalProperties": false,
+  "description": "Cross-row validators must enforce canonical country_a < country_b, unique complete model/origin/pair keys, finite scores, exact model inventory, chronology and cohort membership. JSON NaN/Infinity is prohibited. For the four forecast models and static_logistic_topology, cross-field validation requires score equal probability within absolute tolerance 1e-12."
+}

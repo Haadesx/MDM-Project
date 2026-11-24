@@ -1,0 +1,14 @@
+{
+  "banner": "SYNTHETIC SOFTWARE DEMONSTRATION - NOT RESEARCH RESULTS",
+  "files": {
+    "conditional_slices.csv": "d0d9bd0f983cfcb72d4c4e05dd2cc3522663c34729219e6c3cf1c3b109c07281",
+    "metrics_by_origin.csv": "fcfbbc268009537f98ce885ee2d904909d1ba08153fca192046c2dec1bd0ef0d",
+    "metrics_summary.csv": "dedcd807f4576672030db37a9efa856d30f35d7a56e2be81431473076d04c68e",
+    "model_diagnostics.csv": "f09656decce01d4891dedf5dd5648a0d0f68d7497ff6611a51c30360b17ce60b",
+    "origin_activity.csv": "ea18bc6885bda27101d6ceb280cc1a73694b16f282fb48251143660de51a90c4",
+    "paired_comparisons.csv": "93d455a2e9130f1caeb77a7998dafaf1f353178a11c75399458debbe396ed1bf",
+    "reliability.csv": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "run_id": "demo",
+  "synthetic": true
+}

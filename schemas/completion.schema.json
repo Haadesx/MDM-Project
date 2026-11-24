@@ -1,0 +1,113 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Cooperalink completion state",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "run_id",
+    "engineering_complete",
+    "demo_complete",
+    "research_complete",
+    "real_data_executed",
+    "real_timestral_209m_executed",
+    "completed_test_origins",
+    "missing_models",
+    "blockers"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "1.0.0"
+    },
+    "run_id": {
+      "type": "string"
+    },
+    "engineering_complete": {
+      "type": "boolean"
+    },
+    "demo_complete": {
+      "type": "boolean"
+    },
+    "research_complete": {
+      "type": "boolean"
+    },
+    "real_data_executed": {
+      "type": "boolean"
+    },
+    "real_timestral_209m_executed": {
+      "type": "boolean"
+    },
+    "completed_test_origins": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 12
+    },
+    "missing_models": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "uniqueItems": true
+    },
+    "blockers": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "stage",
+          "code",
+          "detail"
+        ],
+        "properties": {
+          "stage": {
+            "type": "string"
+          },
+          "code": {
+            "type": "string"
+          },
+          "detail": {
+            "type": "string"
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "research_complete": {
+            "const": true
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "engineering_complete": {
+            "const": true
+          },
+          "demo_complete": {
+            "const": true
+          },
+          "real_data_executed": {
+            "const": true
+          },
+          "real_timestral_209m_executed": {
+            "const": true
+          },
+          "completed_test_origins": {
+            "const": 12
+          },
+          "missing_models": {
+            "maxItems": 0
+          },
+          "blockers": {
+            "maxItems": 0
+          }
+        }
+      }
+    }
+  ],
+  "additionalProperties": false,
+  "description": "This schema encodes the fixed top30 study, not optional expansions; acceptance must additionally inspect candidate rows and artifacts."
+}

@@ -1,0 +1,78 @@
+{
+  "checks": {
+    "compileall": {
+      "command": [
+        "/Volumes/Auxilary/Side_Projects/MDM_Project/cooperalink-codex-kit/.venv/bin/python",
+        "-m",
+        "compileall",
+        "-q",
+        "src",
+        "scripts"
+      ],
+      "log": "outputs/verification/compileall.log",
+      "returncode": 0
+    },
+    "demo": {
+      "command": [
+        "/Volumes/Auxilary/Side_Projects/MDM_Project/cooperalink-codex-kit/.venv/bin/cooperalink",
+        "demo",
+        "--config",
+        "config/demo.json",
+        "--output",
+        "outputs/demo"
+      ],
+      "log": "outputs/verification/demo.log",
+      "returncode": 0
+    },
+    "demo_multiyear": {
+      "command": [
+        "/Volumes/Auxilary/Side_Projects/MDM_Project/cooperalink-codex-kit/.venv/bin/cooperalink",
+        "demo",
+        "--config",
+        "config/demo.json",
+        "--multiyear",
+        "--output",
+        "outputs/demo_multiyear"
+      ],
+      "log": "outputs/verification/demo_multiyear.log",
+      "returncode": 0
+    },
+    "pytest": {
+      "command": [
+        "/Volumes/Auxilary/Side_Projects/MDM_Project/cooperalink-codex-kit/.venv/bin/python",
+        "-m",
+        "pytest",
+        "-q"
+      ],
+      "log": "outputs/verification/pytest.log",
+      "returncode": 0
+    }
+  },
+  "code_hash": "cdb74650569dc4969716d6c967674adf16c1d6a52a08e8d505f2c1c415182a05",
+  "demo_checks": {
+    "demo": {
+      "expected_count": 36,
+      "prediction_count": 36,
+      "valid": true
+    },
+    "demo_multiyear": {
+      "expected_count": 504,
+      "prediction_count": 504,
+      "valid": true
+    }
+  },
+  "demo_complete": true,
+  "engineering_complete": true,
+  "evidence_sha256": {
+    "outputs/demo/predictions.parquet": "c0c95571f75227e0e492dc64ff900bc82856b29b1ca2d4360307b71a846c1c2b",
+    "outputs/demo_multiyear/predictions.parquet": "39836646af53f1c23088b2d52ba8eaf842d720d1f2fff9e0eeb681802ba6329c",
+    "outputs/verification/compileall.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "outputs/verification/demo.log": "fa5c39f3ddce13d763d1b00257379550f7fdf648203738282e98aecc9e7ad90b",
+    "outputs/verification/demo_multiyear.log": "cd714e7c30651cfe172ea785a86726a2abf23bab83b27ab0680082debec88d38",
+    "outputs/verification/models-smoke.json": "12eedf3adc0f6c9e04f04074a6691e6e6fdc38a1e6bcad2f48abee07886f427b",
+    "outputs/verification/pytest.log": "83d2765fe6a49ca6712f50a2d5b0ff4b0b6beeb35f790467358f6a5a97b3dcdf"
+  },
+  "genuine_smoke_complete": true,
+  "lock_sha256": "7395c8da2d0dcef1211b4fa42c8e1572415b965b3f0f24b87f4c3ed0c042a6cb",
+  "source_unchanged": true
+}

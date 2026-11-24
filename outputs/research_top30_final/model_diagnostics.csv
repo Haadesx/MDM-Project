@@ -1,0 +1,11 @@
+run_id,model_id,candidate_rows,failed_rows,constant_shortcut_rows,runtime_seconds
+research_top30_final,persistence_binary,5220,0,0,0.0
+research_top30_final,recent_count30,5220,0,0,0.0
+research_top30_final,jaccard,5220,0,0,0.0
+research_top30_final,common_neighbors,5220,0,0,0.0
+research_top30_final,preferential_attachment,5220,0,0,0.0
+research_top30_final,static_logistic_topology,5220,0,0,0.0
+research_top30_final,arima,5220,0,853,13.120805835118517
+research_top30_final,prophet,5220,0,853,145.89649320737226
+research_top30_final,timestral_count_only,5220,0,0,27.822886321810074
+research_top30_final,timestral_graph,5220,0,0,84.98647675139364

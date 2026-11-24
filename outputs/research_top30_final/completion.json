@@ -1,0 +1,12 @@
+{
+  "blockers": [],
+  "completed_test_origins": 12,
+  "demo_complete": true,
+  "engineering_complete": true,
+  "missing_models": [],
+  "real_data_executed": true,
+  "real_timestral_209m_executed": true,
+  "research_complete": true,
+  "run_id": "research_top30_final",
+  "schema_version": "1.0.0"
+}

@@ -1,0 +1,2 @@
+run_id,origin,candidate_count,positive_count,negative_count,positive_prevalence,active_count,activity_rate,eligible_cohort_records,coverage_status
+demo,2024-01-31,6,3,3,0.5,3,0.5,3,complete

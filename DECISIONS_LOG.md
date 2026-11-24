@@ -1,0 +1,13 @@
+# Implementation decisions
+
+- The fixed configuration is validated by its canonical JSON SHA-256. The original configuration, starter expectations, and proposal authorship are intact.
+- The official CAMEO lookup bytes and the reviewed registry have separate SHA-256 fingerprints. The registry excludes regional aggregates, Baghdad, the pre-period retired Netherlands Antilles code, and West Bank and Gaza Strip entries that overlap the official Palestinian Territory entry. The implementation preserves listed raw country codes and audits observed unlisted codes. It does not synthesize absent codes or apply ISO aliases. Reviewing which exclusions affect the top 30 requires the actual 2020 extract.
+- A source manifest declares the exact extraction interval, snapshot, file formats and receipt context. The evidence rows distinguish certified empty days from missing or failed days. The required study fails on any gap in the registered interval.
+- An output directory is one run identity. Compatible forecast batches resume atomically. A different configuration, input, dependency lock or implementation requires a new directory. A single writer owns a run directory.
+- Fitted heads persist numeric scaler and logistic parameters plus role, date bounds and row hashes. A backend or head provenance mismatch blocks scores for that model.
+- The separate multi-year synthetic profile uses four countries, the full annual schedule, a real topology fit and one explicitly fake numerical forecaster with its own demonstration mapper.
+- Terra ran model and bounded acquisition tasks. No Luna selector was available; the evaluation worker used the available default routing. The extracted workspace has no Git metadata.
+- The final report-path patch and canonical verification used the lower-cost Sol worker setting requested during implementation.
+
+- The first real extraction used the official BigQuery Events table through an existing Sandbox project with no linked billing account. The fully downloaded CSV matched the job’s 1,846,939 result rows. The job identity, exact query, hash and UTC coverage certificates are in `data/input/`.
+- Four default ARIMA optimization failures in the 2023 calibration panel were reproduced. A BFGS retry of the same state-space likelihood converged on all four. The fixed model order, trend, stationarity and invertibility constraints, clipping and 90-day histories stayed intact. The optimizer retry is triggered by nonconvergence and uses no outcomes or final-year tuning. The original interrupted run and failed-attempt evidence remain in `outputs/research_top30/`. The rerun uses `outputs/research_top30_final/` and recomputes all required forecasts.

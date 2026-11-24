@@ -1,0 +1,8 @@
+run_id,model_id,candidate_rows,failed_rows,constant_shortcut_rows,runtime_seconds
+demo_multiyear,persistence_binary,72,0,0,0.0
+demo_multiyear,recent_count30,72,0,0,0.0
+demo_multiyear,jaccard,72,0,0,0.0
+demo_multiyear,common_neighbors,72,0,0,0.0
+demo_multiyear,preferential_attachment,72,0,0,0.0
+demo_multiyear,static_logistic_topology,72,0,0,0.0
+demo_multiyear,demo_forecast_stub_mapped,72,0,0,0.00015279307262971997

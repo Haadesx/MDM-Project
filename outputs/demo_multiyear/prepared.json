@@ -1,0 +1,42 @@
+{
+  "artifacts": {
+    "candidate_pairs.parquet": "400f95e2a5f30dde029ab1ff4b4b0a3753c9ce938c2ce3c4ababe366388790ac",
+    "cleaning_audit.json": "ccdf7d094cc5a41851f0f32a33b889ffe058b8d5205f3ea4c4b5ca65b9933345",
+    "cohort.csv": "37f9814768f1ab3842c089103e75e8bc83e02122933f947b30b85cef74676d53",
+    "country_registry.csv": "530da1e94994e89098c7cbf91d8b525743142fb7deb689c594b4f57ce2129866",
+    "coverage.parquet": "4083cd693513ef61cab022d3aed95926a86c1ec50d039844a417d5e0c2112ad9",
+    "daily_counts.parquet": "cccc3437cb12412e5c33dc0a25fbdfd387136bb822d05cafc934ba9e67328fe4",
+    "daily_graph_features.parquet": "53c1950ecc506d5264a3bd6cbefeffe8bf6f4a8f90b0ed90dac7ce394dfbb37e",
+    "data_fingerprints.json": "176cdf75436a931c08ba8e02de9714c669274deaf9bb96baf7d9e23d48757733",
+    "events.parquet": "7746b8078a5a2608a2d551ea0f84578a055ce7ca7f4000bafe14ae5d78545a39",
+    "labels.parquet": "e11415cdafd572d1fea6e874dd033720e0e351ff3c16591ff337d874628f31da",
+    "origins.csv": "e778dc418441d7eb64e01a130cfd54b734e88171b648f7bae8deb0c50ba34505"
+  },
+  "cohort_hash": "a6368d70e1ca5babab7f052a1f0a13c474f43fac9fb3358f9a4b281f1d05e930",
+  "countries": [
+    "AUS",
+    "CAN",
+    "IND",
+    "USA"
+  ],
+  "coverage": {
+    "complete": true,
+    "complete_day_count": 1827,
+    "end_exclusive": "2025-01-01",
+    "evidence_kind": "synthetic_fixture",
+    "expected_day_count": 1827,
+    "start": "2020-01-01"
+  },
+  "data_hash": "68053d7120a48952ee1a9b56fe86e57b75c92bd4b9f59cc3cf1651b4acbb6fdc",
+  "provenance": {
+    "files": {
+      "fixture": {
+        "sha256": "a729a98f4dd37aeccb5a31e83c9a1b0ab86da41e4ac881237f431da47a55ecaf"
+      }
+    },
+    "source": {
+      "dataset": "deterministic synthetic fixture",
+      "synthetic": true
+    }
+  }
+}

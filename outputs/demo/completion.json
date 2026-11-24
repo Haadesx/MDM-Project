@@ -1,0 +1,18 @@
+{
+  "blockers": [
+    {
+      "code": "synthetic_profile",
+      "detail": "Real GDELT source and genuine research model execution required",
+      "stage": "research"
+    }
+  ],
+  "completed_test_origins": 1,
+  "demo_complete": true,
+  "engineering_complete": false,
+  "missing_models": [],
+  "real_data_executed": false,
+  "real_timestral_209m_executed": false,
+  "research_complete": false,
+  "run_id": "demo",
+  "schema_version": "1.0.0"
+}

@@ -1,0 +1,14 @@
+{
+  "candidate_sha256": "81edd66d3793cd47bf4b8afef4e98be798cfaffd10d6af15a9f417610a8cdd9a",
+  "cohort_sha256": "a6368d70e1ca5babab7f052a1f0a13c474f43fac9fb3358f9a4b281f1d05e930",
+  "files": {
+    "fixture": {
+      "sha256": "a729a98f4dd37aeccb5a31e83c9a1b0ab86da41e4ac881237f431da47a55ecaf"
+    }
+  },
+  "normalized_sha256": "68053d7120a48952ee1a9b56fe86e57b75c92bd4b9f59cc3cf1651b4acbb6fdc",
+  "source": {
+    "dataset": "deterministic synthetic fixture",
+    "synthetic": true
+  }
+}

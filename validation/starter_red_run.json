@@ -1,0 +1,12 @@
+{
+  "phase": "intentional_red_starter",
+  "command": "PYTHONPATH=src python3 -m unittest discover -s tests -v",
+  "python_version": "3.12.14",
+  "test_cases_executed": 43,
+  "errors_including_subtests": 48,
+  "assertion_failures": 0,
+  "skipped": 0,
+  "all_errors_intentional_NotImplementedError": true,
+  "application_implemented": false,
+  "real_data_experiment_run": false
+}

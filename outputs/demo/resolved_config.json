@@ -1,0 +1,54 @@
+{
+  "cohort": {
+    "countries": [
+      "AUS",
+      "CAN",
+      "IND",
+      "USA"
+    ],
+    "expected_pairs": 6,
+    "pairs": "all_unordered"
+  },
+  "evaluation": {
+    "cap_k_to_candidates": true,
+    "k_values": [
+      2,
+      10
+    ]
+  },
+  "fixture": "fixtures/gdelt_events_synthetic.json",
+  "models": {
+    "backend": "fake_deterministic",
+    "real_model_download": false,
+    "required": [
+      "persistence_binary",
+      "recent_count30",
+      "jaccard",
+      "common_neighbors",
+      "preferential_attachment",
+      "demo_forecast_stub"
+    ]
+  },
+  "network_allowed": false,
+  "notes": [
+    "The delivered fixture validates one origin and core transforms.",
+    "The implementation must add a deterministic multi-year synthetic generator for calibration/fit integration tests.",
+    "The fake backend is allowed only in this named profile; it must never be labelled Timestral."
+  ],
+  "origin": "2024-01-31",
+  "outputs": {
+    "banner": "SYNTHETIC SOFTWARE DEMONSTRATION - NOT RESEARCH RESULTS",
+    "directory": "outputs/demo"
+  },
+  "profile": "demo_synthetic",
+  "random_seed": 20261120,
+  "research_complete": false,
+  "schema_version": "1.0.0",
+  "synthetic": true,
+  "temporal": {
+    "context_days": 90,
+    "graph_window_days": 30,
+    "horizon_days": 30,
+    "raw_context_days": 119
+  }
+}

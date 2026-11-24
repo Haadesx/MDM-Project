@@ -1,0 +1,94 @@
+{
+  "arima": {
+    "errors": [
+      null
+    ],
+    "pairs": 1,
+    "seconds": 0.18364825000753626,
+    "status": [
+      "ok"
+    ]
+  },
+  "prophet": {
+    "errors": [
+      null
+    ],
+    "pairs": 1,
+    "seconds": 0.3962614170159213,
+    "status": [
+      "ok"
+    ]
+  },
+  "timestral_graph": {
+    "errors": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+    ],
+    "pairs": 32,
+    "seconds": 0.5262317919987254,
+    "status": [
+      "ok",
+      "ok",
+      "ok",
+      "ok",
+      "ok",
+      "ok",
+      "ok",
+      "ok",
+      "ok",
+      "ok",
+      "ok",
+      "ok",
+      "ok",
+      "ok",
+      "ok",
+      "ok",
+      "ok",
+      "ok",
+      "ok",
+      "ok",
+      "ok",
+      "ok",
+      "ok",
+      "ok",
+      "ok",
+      "ok",
+      "ok",
+      "ok",
+      "ok",
+      "ok",
+      "ok",
+      "ok"
+    ]
+  }
+}

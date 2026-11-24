@@ -1,0 +1,15 @@
+{
+  "checkpoint": "mistralai/Timestral-209M",
+  "clip_nonnegative": true,
+  "device": "cpu",
+  "dtype": "torch.float32",
+  "sha256": {
+    "config.json": "1764139bb6d37ee5ff543f470495c086cfa6c373f7134fc61c7e3d844538bfd8",
+    "model.safetensors": "1456effb9927e3daa8c7234f10497e3424233869245a9c72b8ecebaf7ad2b7fa"
+  },
+  "source_revision": "a534bdbd244d64f3d9d743f46c7bf6fc330ed4ff",
+  "symmetric_averaging": true,
+  "timestral_version": "1.0.0",
+  "torch_version": "2.15.0",
+  "weights_revision": "9874d252ab0aae16f7f7c999f98f98d6ad7d8365"
+}

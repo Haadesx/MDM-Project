@@ -1,0 +1,5 @@
+country_code,incidence,rank,selection_year,selected,synthetic
+AUS,,1,,True,True
+CAN,,2,,True,True
+IND,,3,,True,True
+USA,,4,,True,True

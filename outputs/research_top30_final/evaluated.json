@@ -1,0 +1,22 @@
+{
+  "hashes": {
+    "fit_status.json": "bb3b798ae2d2f208ea37a4c44e0db8ba9fc357fd08892ffd638fbebb44fd41c9",
+    "fitted/arima.json": "d9f0d7b31bd0c56017f99478e05c15c5e3e4451fc8083cfbfaf0af2a49c934f1",
+    "fitted/prophet.json": "e7006d1de68c17ac5300ad40a5c5a2176ab2bc5098d19ec0684aae42f3ce6802",
+    "fitted/static_logistic_topology.json": "7cfc8c8f1df7d83c7e0d2bf4a664ccc290623180fa90f180b09f5eaf595d7c0e",
+    "fitted/timestral_count_only.json": "27011f3651e97043b43663c9270a70ceaeed9ec79c9a8f4d9a4d5d4c02922149",
+    "fitted/timestral_graph.json": "7086b578e238f7d91f917287838325aceba6332babd516f4a036d2be396c11fd",
+    "forecasts/calibration_arima.parquet": "eece20fb3a621d002a8bc0da44cb88274cbb236003254a7be637cd6fdc48dc50",
+    "forecasts/calibration_prophet.parquet": "8df7f6733797168be112fbb708437983dd08e2a597e382d94208a7c4d59fff73",
+    "forecasts/calibration_timestral_count_only.parquet": "80fa846ca5cab3db543b75500c511b48677aa000fd9b57a90f93e0996a9b1a50",
+    "forecasts/calibration_timestral_graph.parquet": "c206a87a96ed63ea1556bf3776c05643d2a54540d4a5d2861e9ee402a5fd86ba",
+    "forecasts/test_arima.parquet": "4440312bc69335c7bda480eaf59414bb55d257e635a05c301d8a45ee8d0e7f62",
+    "forecasts/test_prophet.parquet": "c7df6c59135a59c3e104d33111f83e0ee06e183c0ecb14d4f7e241b05a8503f3",
+    "forecasts/test_timestral_count_only.parquet": "75d1b960c322b10d44a0e9fdcbfe02cf29dc54bddcb534ccb52ff92f7d777568",
+    "forecasts/test_timestral_graph.parquet": "60decdbf9a48da94e26a9dd54f8a23fceb2f5d03063984e8725f2ea57c1d10a4",
+    "metric_exports_manifest.json": "03e3cc98d36e7d5f25e71efdbec8a257c6ef6576e0aac9472bf8c5d6b20d5585",
+    "predictions.parquet": "9eeb9995192280bec9b0a930ca7b0b11b9ef5dc9f6c5c757d4f459a589a7c306"
+  },
+  "origins": 12,
+  "score_count": 52200
+}

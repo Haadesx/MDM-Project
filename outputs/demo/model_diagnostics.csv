@@ -1,0 +1,7 @@
+run_id,model_id,candidate_rows,failed_rows,constant_shortcut_rows,runtime_seconds
+demo,persistence_binary,6,0,0,0.0
+demo,recent_count30,6,0,0,0.0
+demo,jaccard,6,0,0,0.0
+demo,common_neighbors,6,0,0,0.0
+demo,preferential_attachment,6,0,0,0.0
+demo,demo_forecast_stub,6,0,0,3.987498348578811e-05

@@ -1,0 +1,98 @@
+{
+  "version": "1.0.0",
+  "max_concurrent_workers": 2,
+  "recursive_delegation": false,
+  "tasks": [
+    {
+      "id": "W00",
+      "owner": "orchestrator",
+      "depends_on": [],
+      "outcome": "Validated red state, environment lock, availability report, durable task state"
+    },
+    {
+      "id": "W01",
+      "owner": "data_worker",
+      "depends_on": [
+        "W00"
+      ],
+      "outcome": "Typed ingestion, country registry, complete source coverage, frozen roster"
+    },
+    {
+      "id": "W02",
+      "owner": "data_worker",
+      "depends_on": [
+        "W01"
+      ],
+      "outcome": "Causal daily panels, graph histories, folds and labels"
+    },
+    {
+      "id": "W03",
+      "owner": "orchestrator_or_worker_2",
+      "depends_on": [
+        "W00"
+      ],
+      "outcome": "Tie-aware metrics and complete direct baseline scoring"
+    },
+    {
+      "id": "W04",
+      "owner": "orchestrator",
+      "depends_on": [
+        "W02",
+        "W03"
+      ],
+      "outcome": "Offline synthetic end-to-end pipeline and report"
+    },
+    {
+      "id": "W05",
+      "owner": "model_worker",
+      "depends_on": [
+        "W02"
+      ],
+      "outcome": "Genuine Timestral/ARIMA/Prophet adapters and smoke evidence"
+    },
+    {
+      "id": "W06",
+      "owner": "orchestrator",
+      "depends_on": [
+        "W03",
+        "W05"
+      ],
+      "outcome": "Isolated topology classifier and four frozen forecast mappers"
+    },
+    {
+      "id": "W07",
+      "owner": "orchestrator",
+      "depends_on": [
+        "W01",
+        "W02"
+      ],
+      "outcome": "Full real input prerequisites validated"
+    },
+    {
+      "id": "W08",
+      "owner": "orchestrator",
+      "depends_on": [
+        "W06",
+        "W07"
+      ],
+      "outcome": "Complete real calibration and final-year evaluation"
+    },
+    {
+      "id": "W09",
+      "owner": "report_worker",
+      "depends_on": [
+        "W04",
+        "W08"
+      ],
+      "outcome": "Evidence-backed report, figures, reproducibility instructions"
+    },
+    {
+      "id": "W10",
+      "owner": "orchestrator",
+      "depends_on": [
+        "W09"
+      ],
+      "outcome": "Acceptance inventory and honest three-level handoff"
+    }
+  ]
+}

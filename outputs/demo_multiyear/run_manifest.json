@@ -1,0 +1,324 @@
+{
+  "artifact_index": [
+    {
+      "bytes": 911,
+      "path": "candidate_pairs.parquet",
+      "sha256": "400f95e2a5f30dde029ab1ff4b4b0a3753c9ce938c2ce3c4ababe366388790ac"
+    },
+    {
+      "bytes": 127,
+      "path": "cleaning_audit.json",
+      "sha256": "ccdf7d094cc5a41851f0f32a33b889ffe058b8d5205f3ea4c4b5ca65b9933345"
+    },
+    {
+      "bytes": 139,
+      "path": "cohort.csv",
+      "sha256": "37f9814768f1ab3842c089103e75e8bc83e02122933f947b30b85cef74676d53"
+    },
+    {
+      "bytes": 455,
+      "path": "completion.json",
+      "sha256": "77b698cc7593d8f75ccdb74ab3438349937e0aadb1a19017da38298063d69339"
+    },
+    {
+      "bytes": 69489,
+      "path": "conditional_slices.csv",
+      "sha256": "d2f93b4ca568ff63c2520597c7f8b1a381641b120f614617dd7132a61bc2de35"
+    },
+    {
+      "bytes": 311,
+      "path": "country_registry.csv",
+      "sha256": "530da1e94994e89098c7cbf91d8b525743142fb7deb689c594b4f57ce2129866"
+    },
+    {
+      "bytes": 35323,
+      "path": "coverage.parquet",
+      "sha256": "4083cd693513ef61cab022d3aed95926a86c1ec50d039844a417d5e0c2112ad9"
+    },
+    {
+      "bytes": 19096,
+      "path": "daily_counts.parquet",
+      "sha256": "cccc3437cb12412e5c33dc0a25fbdfd387136bb822d05cafc934ba9e67328fe4"
+    },
+    {
+      "bytes": 25272,
+      "path": "daily_graph_features.parquet",
+      "sha256": "53c1950ecc506d5264a3bd6cbefeffe8bf6f4a8f90b0ed90dac7ce394dfbb37e"
+    },
+    {
+      "bytes": 486,
+      "path": "data_fingerprints.json",
+      "sha256": "176cdf75436a931c08ba8e02de9714c669274deaf9bb96baf7d9e23d48757733"
+    },
+    {
+      "bytes": 553,
+      "path": "environment.json",
+      "sha256": "73fd901c217d074488a5e0c2cd91ce51a66c2bbe4a9fa323745012fd065e7d20"
+    },
+    {
+      "bytes": 830,
+      "path": "evaluated.json",
+      "sha256": "573f7a1b289c1edb6a287397e4f7db371a57d15d73b9ab5655eac85f3816b1fa"
+    },
+    {
+      "bytes": 12961,
+      "path": "events.parquet",
+      "sha256": "7746b8078a5a2608a2d551ea0f84578a055ce7ca7f4000bafe14ae5d78545a39"
+    },
+    {
+      "bytes": 39649,
+      "path": "figures/observed_activity.svg",
+      "sha256": "ca84dd745c11994242be395c8dc4c0aac928a66a00dcf3c764cf8ce329755af2"
+    },
+    {
+      "bytes": 24134,
+      "path": "figures/performance_by_origin.svg",
+      "sha256": "ef157841492c4a2d5f30701ac8b75cafe46e67ea33b44fc3f4eec6ca8dddcbfa"
+    },
+    {
+      "bytes": 15689,
+      "path": "figures/reliability.svg",
+      "sha256": "68fe0c1d5d61b6d576445f268c0ccc4f01fe507a3deb3781818913d6f13e9dec"
+    },
+    {
+      "bytes": 241,
+      "path": "fit_status.json",
+      "sha256": "ddf4716898b2c074ff24544ef1969c1b87b384cc4b5bcba9b0287c184b722792"
+    },
+    {
+      "bytes": 3413,
+      "path": "fitted/demo_forecast_stub_mapped.json",
+      "sha256": "2b52fc566bc6187edc93d428b29ea3c0301ce55eed7e325a2f8aa0bc85ac9c4a"
+    },
+    {
+      "bytes": 1500,
+      "path": "fitted/static_logistic_topology.json",
+      "sha256": "47f0f27882d5d82ef495d8a0ab54ed345c8b944e88791b336664453388b8490a"
+    },
+    {
+      "bytes": 7108,
+      "path": "forecasts/calibration_demo_forecast_stub_mapped.parquet",
+      "sha256": "70faa84e23af406728ddace48d609ac5e65baba3e3348d5343739974257d9a12"
+    },
+    {
+      "bytes": 7100,
+      "path": "forecasts/test_demo_forecast_stub_mapped.parquet",
+      "sha256": "b5254ba51b4129e06ddc3c65a850c649add87dd7d0ce61fb08901cf83cf19560"
+    },
+    {
+      "bytes": 2782,
+      "path": "labels.parquet",
+      "sha256": "e11415cdafd572d1fea6e874dd033720e0e351ff3c16591ff337d874628f31da"
+    },
+    {
+      "bytes": 813,
+      "path": "metric_exports_manifest.json",
+      "sha256": "b34b05905bc53d176f3d6d502fe3f0d58fb1f2b174177261b78731cbe7fa5819"
+    },
+    {
+      "bytes": 41599,
+      "path": "metrics_by_origin.csv",
+      "sha256": "2b6a3e2b9ba2f51a9505b697a450c24c7e48170186a3e2d2b1d2b5e923ecbef8"
+    },
+    {
+      "bytes": 10342,
+      "path": "metrics_summary.csv",
+      "sha256": "0d372453aeb84859b0ca4c64c6c2e529eb155439b368cd547dc3265ce3003043"
+    },
+    {
+      "bytes": 425,
+      "path": "model_diagnostics.csv",
+      "sha256": "d1c54e6bfc5c5417ffc32b9db0d3144fc05b9984225beb59b23022123efc43c4"
+    },
+    {
+      "bytes": 1068,
+      "path": "origin_activity.csv",
+      "sha256": "94b919c131e728a9781facccefb07bfa09e218f92562f90d8e40620e609bd2f3"
+    },
+    {
+      "bytes": 4286,
+      "path": "origins.csv",
+      "sha256": "e778dc418441d7eb64e01a130cfd54b734e88171b648f7bae8deb0c50ba34505"
+    },
+    {
+      "bytes": 43048,
+      "path": "paired_comparisons.csv",
+      "sha256": "bfe397bab4e62acd4b8052720088b00ddcb51e8ee118201178f9a3a612d207dc"
+    },
+    {
+      "bytes": 7305,
+      "path": "predictions.parquet",
+      "sha256": "39836646af53f1c23088b2d52ba8eaf842d720d1f2fff9e0eeb681802ba6329c"
+    },
+    {
+      "bytes": 1755,
+      "path": "prepared.json",
+      "sha256": "a8a2d9a28b80c27fee720d3a1c9c0af6b978c067b9fcc975773360a2c5959dbb"
+    },
+    {
+      "bytes": 1423,
+      "path": "reliability.csv",
+      "sha256": "6e1e82aab519cb5889c4454440d071dc0ea1092fd71d02c27fc4f510455d8636"
+    },
+    {
+      "bytes": 133097,
+      "path": "report.html",
+      "sha256": "8b1a7d48ce6e3ca16c95db22ae70c8c935b49253c3cd2c89cf8664bb56f71e9f"
+    },
+    {
+      "bytes": 17325,
+      "path": "report.md",
+      "sha256": "f301e7ebcf3b460c6763c2256cf1f7df583bda45472d9966e406821b1fd79825"
+    },
+    {
+      "bytes": 1779,
+      "path": "resolved_config.json",
+      "sha256": "17deffde6a641351d6bc293c2e88b36e65a9cfbe238d525968ae59a12396707f"
+    },
+    {
+      "bytes": 789,
+      "path": "run_request.json",
+      "sha256": "ea20555ff39b672e0bd33f69cb85af5fc6e5a69f3c1353f096cce4e542ab603b"
+    },
+    {
+      "bytes": 195,
+      "path": "stage_status.json",
+      "sha256": "0beee91bdfb9b949c258a63df5848a1d0fa69068714a8a92916a177f674e9cf1"
+    }
+  ],
+  "candidate_count": 6,
+  "code_sha256": "cdb74650569dc4969716d6c967674adf16c1d6a52a08e8d505f2c1c415182a05",
+  "cohort_sha256": "a6368d70e1ca5babab7f052a1f0a13c474f43fac9fb3358f9a4b281f1d05e930",
+  "config_sha256": "9fd0ebae19e6e3f2857eed759397bc0dbc65fc0e417e70d4ad34c158d3045a19",
+  "country_registry_sha256": "530da1e94994e89098c7cbf91d8b525743142fb7deb689c594b4f57ce2129866",
+  "created_at": "2026-11-20T18:12:30.168361+00:00",
+  "data_sha256": "68053d7120a48952ee1a9b56fe86e57b75c92bd4b9f59cc3cf1651b4acbb6fdc",
+  "environment_lock_sha256": "7395c8da2d0dcef1211b4fa42c8e1572415b965b3f0f24b87f4c3ed0c042a6cb",
+  "models": [
+    {
+      "backend_kind": "deterministic_rule",
+      "fit_label_last_day": null,
+      "fitted_id": null,
+      "model_id": "persistence_binary",
+      "runtime_seconds": 0.0,
+      "settings_sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+      "status": "complete",
+      "status_counts": {
+        "ok": 72
+      }
+    },
+    {
+      "backend_kind": "deterministic_rule",
+      "fit_label_last_day": null,
+      "fitted_id": null,
+      "model_id": "recent_count30",
+      "runtime_seconds": 0.0,
+      "settings_sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+      "status": "complete",
+      "status_counts": {
+        "ok": 72
+      }
+    },
+    {
+      "backend_kind": "deterministic_rule",
+      "fit_label_last_day": null,
+      "fitted_id": null,
+      "model_id": "jaccard",
+      "runtime_seconds": 0.0,
+      "settings_sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+      "status": "complete",
+      "status_counts": {
+        "ok": 72
+      }
+    },
+    {
+      "backend_kind": "deterministic_rule",
+      "fit_label_last_day": null,
+      "fitted_id": null,
+      "model_id": "common_neighbors",
+      "runtime_seconds": 0.0,
+      "settings_sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+      "status": "complete",
+      "status_counts": {
+        "ok": 72
+      }
+    },
+    {
+      "backend_kind": "deterministic_rule",
+      "fit_label_last_day": null,
+      "fitted_id": null,
+      "model_id": "preferential_attachment",
+      "runtime_seconds": 0.0,
+      "settings_sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+      "status": "complete",
+      "status_counts": {
+        "ok": 72
+      }
+    },
+    {
+      "backend_kind": "real",
+      "fit_label_last_day": "2022-12-26",
+      "fitted_id": "900d34ca14331ea70300f86e626f667f0580b3e2b6d3e6625f620a6923ea79da",
+      "library": "scikit-learn",
+      "model_id": "static_logistic_topology",
+      "runtime_seconds": 0.0,
+      "settings_sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+      "status": "complete",
+      "status_counts": {
+        "ok": 72
+      },
+      "version": "1.9.1"
+    },
+    {
+      "backend": "deterministic_synthetic_stub",
+      "backend_kind": "fake",
+      "fit_label_last_day": "2023-12-26",
+      "fitted_id": "22c66d9a1e765ad7e076d1263049ef1e9657dbd20d52ecec34cbca2a8b8e7fb3",
+      "model_id": "demo_forecast_stub_mapped",
+      "runtime_seconds": 0.00015279307262971997,
+      "settings_sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+      "status": "complete",
+      "status_counts": {
+        "ok": 72
+      }
+    }
+  ],
+  "planned_test_origins": [
+    "2023-12-31",
+    "2024-01-30",
+    "2024-02-29",
+    "2024-03-30",
+    "2024-04-29",
+    "2024-05-29",
+    "2024-06-28",
+    "2024-07-28",
+    "2024-08-27",
+    "2024-09-26",
+    "2024-10-26",
+    "2024-11-25"
+  ],
+  "profile": "demo_synthetic_multiyear",
+  "run_id": "demo_multiyear",
+  "schema_version": "1.0.0",
+  "source_coverage": {
+    "complete": true,
+    "complete_day_count": 1827,
+    "end_exclusive": "2025-01-01",
+    "evidence_kind": "synthetic_fixture",
+    "expected_day_count": 1827,
+    "start": "2020-01-01"
+  },
+  "source_provenance": {
+    "files": {
+      "fixture": {
+        "sha256": "a729a98f4dd37aeccb5a31e83c9a1b0ab86da41e4ac881237f431da47a55ecaf"
+      }
+    },
+    "source": {
+      "dataset": "deterministic synthetic fixture",
+      "synthetic": true
+    }
+  },
+  "synthetic": true,
+  "verification": {}
+}

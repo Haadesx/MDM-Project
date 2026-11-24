@@ -1,0 +1,134 @@
+{
+  "status": "synthetic_hand_calculated",
+  "origin": "2024-01-31",
+  "unique_events": 9,
+  "countries": [
+    "AUS",
+    "CAN",
+    "IND",
+    "USA"
+  ],
+  "candidate_pairs": [
+    [
+      "AUS",
+      "CAN"
+    ],
+    [
+      "AUS",
+      "IND"
+    ],
+    [
+      "AUS",
+      "USA"
+    ],
+    [
+      "CAN",
+      "IND"
+    ],
+    [
+      "CAN",
+      "USA"
+    ],
+    [
+      "IND",
+      "USA"
+    ]
+  ],
+  "context_first_day": "2023-11-03",
+  "context_last_day": "2024-01-31",
+  "context_days": 90,
+  "graph_raw_first_day": "2023-10-05",
+  "graph_raw_days": 119,
+  "future_first_day": "2024-02-01",
+  "future_last_day": "2024-03-01",
+  "daily_counts_AUS_CAN_2024_01": [
+    0,
+    1,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    1
+  ],
+  "graph_at_origin": {
+    "AUS": [
+      "CAN"
+    ],
+    "CAN": [
+      "AUS",
+      "IND"
+    ],
+    "IND": [
+      "CAN",
+      "USA"
+    ],
+    "USA": [
+      "IND"
+    ]
+  },
+  "labels": {
+    "AUS|CAN": 0,
+    "AUS|IND": 0,
+    "AUS|USA": 1,
+    "CAN|IND": 0,
+    "CAN|USA": 1,
+    "IND|USA": 1
+  },
+  "persistence": {
+    "AUS|CAN": 1,
+    "AUS|IND": 0,
+    "AUS|USA": 0,
+    "CAN|IND": 1,
+    "CAN|USA": 0,
+    "IND|USA": 1
+  },
+  "features_AUS_IND": {
+    "common_neighbors": 1,
+    "jaccard": 0.5,
+    "preferential_attachment": 2
+  },
+  "features_CAN_IND": {
+    "common_neighbors": 0,
+    "jaccard": 0.0,
+    "preferential_attachment": 4
+  },
+  "ranking_fixture": {
+    "auc": 0.7,
+    "average_precision": 0.3333333333333333,
+    "precision_at_2": 0.25,
+    "expected_hits_at_2": 0.5,
+    "filtered_mrr": 0.7,
+    "positive_query_count": 2
+  },
+  "2024_fold_count": 12,
+  "2024_last_label_day": "2024-12-25",
+  "2024_omitted_tail": [
+    "2024-12-26",
+    "2024-12-31"
+  ],
+  "nonleap_last_label_day": "December 26"
+}

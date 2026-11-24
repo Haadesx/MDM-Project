@@ -1,0 +1,279 @@
+{
+  "artifact_index": [
+    {
+      "bytes": 911,
+      "path": "candidate_pairs.parquet",
+      "sha256": "400f95e2a5f30dde029ab1ff4b4b0a3753c9ce938c2ce3c4ababe366388790ac"
+    },
+    {
+      "bytes": 122,
+      "path": "cleaning_audit.json",
+      "sha256": "913dcb71ae9ffb38af7d2ee6393f3e43d9f9592329e2e27354f02531ed6aebb8"
+    },
+    {
+      "bytes": 139,
+      "path": "cohort.csv",
+      "sha256": "37f9814768f1ab3842c089103e75e8bc83e02122933f947b30b85cef74676d53"
+    },
+    {
+      "bytes": 444,
+      "path": "completion.json",
+      "sha256": "b6740d170eb4986fa6dfeb8ec22c15e83c371a84f4980d91fed5663846868931"
+    },
+    {
+      "bytes": 4404,
+      "path": "conditional_slices.csv",
+      "sha256": "d0d9bd0f983cfcb72d4c4e05dd2cc3522663c34729219e6c3cf1c3b109c07281"
+    },
+    {
+      "bytes": 311,
+      "path": "country_registry.csv",
+      "sha256": "530da1e94994e89098c7cbf91d8b525743142fb7deb689c594b4f57ce2129866"
+    },
+    {
+      "bytes": 6756,
+      "path": "coverage.parquet",
+      "sha256": "c14e5ac917949ea814121353ec08a8fcb13a850a4d1f8afa1805605ba037db53"
+    },
+    {
+      "bytes": 2832,
+      "path": "daily_counts.parquet",
+      "sha256": "0d82c7276fa536ec0d44f1dee7fbb00c82b7cfdb5eb77715ce91db0967c674b2"
+    },
+    {
+      "bytes": 4436,
+      "path": "daily_graph_features.parquet",
+      "sha256": "f9dd046e93aae41c7c95c6c2acfb49de8e3f4e6270030a9e19d9d1d42916721b"
+    },
+    {
+      "bytes": 486,
+      "path": "data_fingerprints.json",
+      "sha256": "abceff56b224f818dcdb660ffeaf2025a64f0888e55b5a13390c3a6ddae7d3a6"
+    },
+    {
+      "bytes": 553,
+      "path": "environment.json",
+      "sha256": "73fd901c217d074488a5e0c2cd91ce51a66c2bbe4a9fa323745012fd065e7d20"
+    },
+    {
+      "bytes": 465,
+      "path": "evaluated.json",
+      "sha256": "46ac9226f48c745fe052e9756ac98a36ef4b7cc7e0cfd6e8bb62a8300eee7317"
+    },
+    {
+      "bytes": 3027,
+      "path": "events.parquet",
+      "sha256": "6a9ff88a14cf88cc75494959384e10e67f4e7cc79ceab4191fb4d90964d698af"
+    },
+    {
+      "bytes": 21369,
+      "path": "figures/observed_activity.svg",
+      "sha256": "4a936b79527794eabd9d7c9313e8f1d18318e9468ee4bd45556a70d08fbbe306"
+    },
+    {
+      "bytes": 13625,
+      "path": "figures/performance_by_origin.svg",
+      "sha256": "4b0b886dcef18149cfd0efc4b5ac150078f4e6edd894be583e6586aec7ec921b"
+    },
+    {
+      "bytes": 38,
+      "path": "fit_status.json",
+      "sha256": "b58272bcaa5de85c90294b7ebf619d43419709fffec329e2af3f0f9da4e84f3e"
+    },
+    {
+      "bytes": 5538,
+      "path": "forecasts/test_demo_forecast_stub.parquet",
+      "sha256": "718e4d917783e83f34a0976cbd5cf7aad330e178b323629b4f8185ec27495769"
+    },
+    {
+      "bytes": 2027,
+      "path": "labels.parquet",
+      "sha256": "cef943d6d87361fcf699d8b897903ba6a0e8680f47ec01667366b1e891034e40"
+    },
+    {
+      "bytes": 803,
+      "path": "metric_exports_manifest.json",
+      "sha256": "b2c1b2984cfa196ab03e55142151725923d979866c7f616fb688dab4df5969f8"
+    },
+    {
+      "bytes": 2559,
+      "path": "metrics_by_origin.csv",
+      "sha256": "fcfbbc268009537f98ce885ee2d904909d1ba08153fca192046c2dec1bd0ef0d"
+    },
+    {
+      "bytes": 6251,
+      "path": "metrics_summary.csv",
+      "sha256": "dedcd807f4576672030db37a9efa856d30f35d7a56e2be81431473076d04c68e"
+    },
+    {
+      "bytes": 299,
+      "path": "model_diagnostics.csv",
+      "sha256": "f09656decce01d4891dedf5dd5648a0d0f68d7497ff6611a51c30360b17ce60b"
+    },
+    {
+      "bytes": 192,
+      "path": "origin_activity.csv",
+      "sha256": "ea18bc6885bda27101d6ceb280cc1a73694b16f282fb48251143660de51a90c4"
+    },
+    {
+      "bytes": 209,
+      "path": "origins.csv",
+      "sha256": "2213355a28b1c3b1d2f455850f026ba0f09982bb34b57788ea6111e39f61f9b4"
+    },
+    {
+      "bytes": 2989,
+      "path": "paired_comparisons.csv",
+      "sha256": "93d455a2e9130f1caeb77a7998dafaf1f353178a11c75399458debbe396ed1bf"
+    },
+    {
+      "bytes": 4702,
+      "path": "predictions.parquet",
+      "sha256": "c0c95571f75227e0e492dc64ff900bc82856b29b1ca2d4360307b71a846c1c2b"
+    },
+    {
+      "bytes": 1753,
+      "path": "prepared.json",
+      "sha256": "64e4eba67c0985eabe56fc292823795992b0b0de548a469487ef369beea373e2"
+    },
+    {
+      "bytes": 0,
+      "path": "reliability.csv",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 62194,
+      "path": "report.html",
+      "sha256": "e682071b1c932e911d4dc1409b69693af491c07b56cbbdd8a73100acff5dd2a7"
+    },
+    {
+      "bytes": 9966,
+      "path": "report.md",
+      "sha256": "4caf63e402f0b3e9b24fa7f475e7f685f14eb77753d7c74cc46d7c60822b9d9d"
+    },
+    {
+      "bytes": 1325,
+      "path": "resolved_config.json",
+      "sha256": "26bf42dad49516bd4cba5ee80efd49d9fb29ef8772b2149875aac5af3884edd6"
+    },
+    {
+      "bytes": 789,
+      "path": "run_request.json",
+      "sha256": "19a375b72a86a132a0defc950df92ba9c694cfbd78a19a692427281ff9b8c6d8"
+    },
+    {
+      "bytes": 195,
+      "path": "stage_status.json",
+      "sha256": "0beee91bdfb9b949c258a63df5848a1d0fa69068714a8a92916a177f674e9cf1"
+    }
+  ],
+  "candidate_count": 6,
+  "code_sha256": "cdb74650569dc4969716d6c967674adf16c1d6a52a08e8d505f2c1c415182a05",
+  "cohort_sha256": "a6368d70e1ca5babab7f052a1f0a13c474f43fac9fb3358f9a4b281f1d05e930",
+  "config_sha256": "5e6b6f7f9d7eb6ef5f8a876e7401a90b3247db91c50b119b75009c20989e0ac6",
+  "country_registry_sha256": "530da1e94994e89098c7cbf91d8b525743142fb7deb689c594b4f57ce2129866",
+  "created_at": "2026-11-20T18:12:29.496030+00:00",
+  "data_sha256": "5212d4926aff743ae8dff081d8368bffb8958f9281b281d8c963eaf8336945f2",
+  "environment_lock_sha256": "7395c8da2d0dcef1211b4fa42c8e1572415b965b3f0f24b87f4c3ed0c042a6cb",
+  "models": [
+    {
+      "backend_kind": "deterministic_rule",
+      "fit_label_last_day": null,
+      "fitted_id": null,
+      "model_id": "persistence_binary",
+      "runtime_seconds": 0.0,
+      "settings_sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+      "status": "complete",
+      "status_counts": {
+        "ok": 6
+      }
+    },
+    {
+      "backend_kind": "deterministic_rule",
+      "fit_label_last_day": null,
+      "fitted_id": null,
+      "model_id": "recent_count30",
+      "runtime_seconds": 0.0,
+      "settings_sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+      "status": "complete",
+      "status_counts": {
+        "ok": 6
+      }
+    },
+    {
+      "backend_kind": "deterministic_rule",
+      "fit_label_last_day": null,
+      "fitted_id": null,
+      "model_id": "jaccard",
+      "runtime_seconds": 0.0,
+      "settings_sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+      "status": "complete",
+      "status_counts": {
+        "ok": 6
+      }
+    },
+    {
+      "backend_kind": "deterministic_rule",
+      "fit_label_last_day": null,
+      "fitted_id": null,
+      "model_id": "common_neighbors",
+      "runtime_seconds": 0.0,
+      "settings_sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+      "status": "complete",
+      "status_counts": {
+        "ok": 6
+      }
+    },
+    {
+      "backend_kind": "deterministic_rule",
+      "fit_label_last_day": null,
+      "fitted_id": null,
+      "model_id": "preferential_attachment",
+      "runtime_seconds": 0.0,
+      "settings_sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+      "status": "complete",
+      "status_counts": {
+        "ok": 6
+      }
+    },
+    {
+      "backend": "deterministic_synthetic_stub",
+      "backend_kind": "fake",
+      "fit_label_last_day": null,
+      "fitted_id": null,
+      "model_id": "demo_forecast_stub",
+      "runtime_seconds": 3.987498348578811e-05,
+      "settings_sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+      "status": "complete",
+      "status_counts": {
+        "ok": 6
+      }
+    }
+  ],
+  "planned_test_origins": [
+    "2024-01-31"
+  ],
+  "profile": "demo_synthetic",
+  "run_id": "demo",
+  "schema_version": "1.0.0",
+  "source_coverage": {
+    "complete": true,
+    "complete_day_count": 149,
+    "end_exclusive": "2024-03-02",
+    "evidence_kind": "synthetic_fixture",
+    "expected_day_count": 149,
+    "start": "2023-10-05"
+  },
+  "source_provenance": {
+    "files": {
+      "fixture": {
+        "sha256": "5e338fcc3e1e2fd5f7401888a1b881c239a01190c3de1f0c4ddd8ceda5847417"
+      }
+    },
+    "source": {
+      "dataset": "deterministic synthetic fixture",
+      "synthetic": true
+    }
+  },
+  "synthetic": true,
+  "verification": {}
+}

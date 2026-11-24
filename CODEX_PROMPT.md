@@ -1,0 +1,19 @@
+# Paste this into Codex after opening the extracted folder
+
+Implement this entire Cooperalink research project from the attached implementation kit. The goal is a reproducible, tested GDELT/Timestral forecasting study and its final report, not merely a plan or scaffold.
+
+Read and follow root `AGENTS.md` and the indexed specification. The original proposal is `references/original_proposal.pdf`; the TA feedback is `references/ta_feedback.md`. The kit contains deliberate `NotImplementedError` application stubs and red contract tests. Implement them, preserve their scientific intent, and add the remaining adapter/integration/acceptance tests required in `docs/07_TDD_GUIDE.md`.
+
+Use Sol to orchestrate if available, with at most two concurrent workers: preferably 6.1 Terra for data/scientific implementation and Luna for bounded reporting or boilerplate. Use the environment's actual supported routing; if those choices are unavailable, keep the same bounded task structure with available agents or work sequentially. Do not assume model-name availability, create nested worker trees, or launch repeated high-cost reviews.
+
+Work autonomously through the gates in `docs/08_IMPLEMENTATION_PLAN.md`. Start by inspecting the repository, installed tools, available data, and model cache; preserve existing work. Establish `TASKS.md`, `PROGRESS.md`, and a dependency lock. Run the red contract suite before implementation. Deliver the offline synthetic vertical slice first, then genuine model adapters and the real experiment. Continue all independent work if access to real data, weights, or a dependency is temporarily blocked.
+
+The main protocol is fixed: GDELT 2.0 exact `061`; country affiliations; sorted undirected pairs; distinct event IDs; UTC `DATEADDED` day; top-30 country cohort chosen only on 2020 valid-record incidence; all 435 pairs at every origin; all observed negatives; 90 input days; daily graph features from a trailing-30-day graph; a 30-day prediction horizon. Use 2021 fitting, 2022 selection, 2023 probability mapping, and 2024 final testing in the prescribed complete non-overlapping 30-day blocks.
+
+Retain Timestral-209M with historical graph covariates and its count-only ablation. Include binary 30-day persistence, recent-count30, Jaccard, common neighbors, preferential attachment, ARIMA, Prophet, and static topology logistic regression. Report ROC-AUC, AP, tie-aware P@10/25/50, and the precisely defined filtered MRR. Every model must score the same eligible candidate rows; failures must not silently remove hard rows. Use all model/metric definitions in the kit rather than inventing shortcuts.
+
+Build the local CLI, deterministic data pipeline, caches, manifests, genuine model adapters, result tables, figures, readable report, and reproduction commands. The report must directly answer the TA's feedback and compare the main method against persistence. Passing tests and completing a valid experiment are the goal; beating a baseline is not guaranteed and must never be manufactured.
+
+Keep spending at the configured default of zero new billable services. Reuse an existing export and model cache when possible. Inspect the data-access templates and produce dry-run estimates before any cloud query. Do not enable billing or download the complete five-year raw GDELT archive automatically. If real-data access is missing, finish the runnable implementation and synthetic end-to-end test, state the exact prerequisite, and leave a resumable real-run command. Never disguise synthetic results as research.
+
+Stop only when the acceptance gates are satisfied or all remaining work is demonstrably blocked by an external prerequisite. At handoff, report engineering/demo/research completion separately, the tests actually executed, real data and model provenance, actual results versus persistence if available, output paths, and a concise remaining-issues list.

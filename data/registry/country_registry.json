@@ -1,0 +1,8 @@
+{
+  "classification": "CAMEO labels reviewed before reading outcomes. Raw codes are preserved. Unlisted codes are excluded and counted.",
+  "lookup": "CAMEO.country.txt",
+  "registry_sha256": "adb6bd5cebd93f6d540a3949d5b29110d843d5cef857ccbfc1ee9d00a6d3a99b",
+  "retrieved": "2026-11-20",
+  "sha256": "e1fbc5cf51fd582cd5745263e22d57383a6882c6ea8c4418e1ddb159b568fba3",
+  "source": "https://www.gdeltproject.org/data/lookups/CAMEO.country.txt"
+}

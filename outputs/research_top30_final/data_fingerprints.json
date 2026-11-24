@@ -1,0 +1,59 @@
+{
+  "candidate_sha256": "014cedf8e20ce48407e5a3a66240269a8981e23319b7e27080e686e3fca785a0",
+  "cohort_sha256": "df70def4c173aef833a14ed1469e1ed457a96c42aacf96e4968b920b3cd58d2c",
+  "files": {
+    "coverage.csv": {
+      "bytes": 609569,
+      "sha256": "3656c09ee96dedf662ef4d3a593b6fc96c2c417b3635b939e4b323255844c729"
+    },
+    "gdelt-2-events-061-2020-2024.csv": {
+      "bytes": 82320804,
+      "sha256": "3572838d0e1b16f72fd0d245887e34c6ca5a4183de008b624decc604e4271cd6"
+    },
+    "source.json": {
+      "bytes": 1468,
+      "sha256": "7208c6d444a6e0c8eb285ad5d117a19a13163eb482fc473c99c85adb99188f26"
+    }
+  },
+  "normalized_sha256": "acc63e07ff1a75f9864964ce2e10c04851a72f8465c6e15a735b306585abff1a",
+  "registry": {
+    "classification": "CAMEO labels reviewed before reading outcomes. Raw codes are preserved. Unlisted codes are excluded and counted.",
+    "lookup": "CAMEO.country.txt",
+    "registry_sha256": "adb6bd5cebd93f6d540a3949d5b29110d843d5cef857ccbfc1ee9d00a6d3a99b",
+    "retrieved": "2026-11-20",
+    "sha256": "e1fbc5cf51fd582cd5745263e22d57383a6882c6ea8c4418e1ddb159b568fba3",
+    "source": "https://www.gdeltproject.org/data/lookups/CAMEO.country.txt"
+  },
+  "source": {
+    "coverage": "coverage.csv",
+    "dataset": "GDELT 2.0 Events",
+    "end_exclusive": "2025-01-01",
+    "extracted_at_utc": "2026-11-20T18:04:40Z",
+    "extraction_scope": "SELECT CAST(GLOBALEVENTID AS STRING) AS GlobalEventID, CAST(SQLDATE AS STRING) AS SQLDATE, CAST(DATEADDED AS STRING) AS DATEADDED, Actor1CountryCode, Actor2CountryCode, EventCode FROM `gdelt-bq.gdeltv2.events` WHERE DATEADDED >= 20200101000000 AND DATEADDED < 20250101000000 AND EventCode = '061'",
+    "files": [
+      {
+        "delimiter": ",",
+        "path": "gdelt-2-events-061-2020-2024.csv",
+        "sha256": "3572838d0e1b16f72fd0d245887e34c6ca5a4183de008b624decc604e4271cd6"
+      }
+    ],
+    "job_receipt": {
+      "billed_bytes_display": "29.04 GB",
+      "billing_account_linked": false,
+      "dry_run_display": "29.04 GB",
+      "finished_at_utc": "2026-11-20T18:04:40Z",
+      "job_id": "mdmproject-515318:US.job_BzWznT4Jw1tWyVa7TbId2jLw2EpK",
+      "job_url": "https://console.cloud.google.com/bigquery?project=mdmproject-515318&ws=!1m5!1m4!1m3!1smdmproject-515318!2sjob_BzWznT4Jw1tWyVa7TbId2jLw2EpK!3sUS",
+      "location": "US",
+      "processed_display": "29.04 GB",
+      "result_rows": 1846939,
+      "sandbox": true,
+      "started_at_utc": "2026-11-20T18:04:36Z",
+      "status": "Query completed",
+      "transfer": "Google Cloud Console CSV export through private Google Drive file"
+    },
+    "snapshot": "bigquery:mdmproject-515318:US.job_BzWznT4Jw1tWyVa7TbId2jLw2EpK",
+    "start": "2020-01-01",
+    "synthetic": false
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "banner": null,
+  "files": {
+    "conditional_slices.csv": "e962677a95b0702d4b88eb05674b733c59449bdfaed5554a7730d841efb5f705",
+    "metrics_by_origin.csv": "e32dadc03a910563a9232319a86abfd6de1ff92d21b9c5f86d84dc4347b8d0f5",
+    "metrics_summary.csv": "a5814d557689d6f473f6afdb7552bd4096396e8a64df4290f4aae1266fac2f74",
+    "model_diagnostics.csv": "56a672a9d8eeb80eaac766586f7e18cc1289a2c316de737062b7c0727cc04d6d",
+    "origin_activity.csv": "9a41083483e37ec900c8ce19662c85c37e61aa7f7ba0389fba65816ba04b2d19",
+    "paired_comparisons.csv": "83ce8e783017d6629b9e0902eae7df890f8be113f7e9bd45ef7f50acaaba3487",
+    "reliability.csv": "34c1f5b956ca609f289f2269b00a5a9b0bd883fa8b9289854445cabca2a032a8"
+  },
+  "run_id": "research_top30_final",
+  "synthetic": false
+}
